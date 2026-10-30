@@ -1,339 +1,1057 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | VETA COMPANY LTD</title>
-<meta name="description" content="VETA COMPANY LTD services: Web development, software engineering, cybersecurity, IT consulting, cloud services, and network infrastructure.">
+
+<title>Our Services | MARWA TECH COMPANY LTD</title>
+
+<meta name="description" content="Explore professional web development, software development, cybersecurity, IT consulting, cloud services and network infrastructure solutions from MARWA TECH COMPANY LTD.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-* { box-sizing: border-box; }
+:root {
+    --navy: #071426;
+    --blue: #087cf0;
+    --light-blue: #eaf3ff;
+    --white: #ffffff;
+    --text: #263449;
+    --muted: #64748b;
+    --background: #f7f9fc;
+    --border: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  margin:0;
-  padding:0;
-  background:#131313;
-  color:#e5e2e1;
-  font-family:Arial,sans-serif;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
 }
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+
 header {
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:100;
-  background:rgba(0,0,0,0.9);
-  border-bottom:1px solid #414754;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--navy);
+    box-shadow: 0 3px 15px rgba(0,0,0,0.12);
 }
+
 .nav-wrap {
-  max-width:1320px;
-  margin:0 auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:12px 16px;
+    max-width: 1250px;
+    margin: auto;
+    padding: 15px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
 .logo {
-  color:#adc7ff;
-  font-weight:bold;
-  font-size:20px;
-  display:flex;
-  align-items:center;
-  gap:8px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: white;
 }
 
-/* Desktop nav */
+.logo-icon {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue);
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-text strong {
+    font-size: 17px;
+    letter-spacing: 0.5px;
+}
+
+.logo-text small {
+    font-size: 10px;
+    color: #b8c9dd;
+    letter-spacing: 1.5px;
+}
+
 nav {
-  display:flex;
+    display: flex;
+    align-items: center;
+    gap: 22px;
 }
+
 nav a {
-  color:#c1c6d7;
-  text-decoration:none;
-  margin:0 10px;
-  font-size:14px;
-  text-transform:uppercase;
-  letter-spacing:0.05em;
+    color: #d3dfed;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
 }
+
+nav a:hover,
 nav a.active {
-  color:#adc7ff;
-  font-weight:bold;
-}
-nav a:hover {
-  color:#adc7ff;
+    color: #58aaff;
 }
 
-/* Hamburger button */
 .menu-btn {
-  display:none;
-  background:none;
-  border:none;
-  color:#e5e2e1;
-  font-size:32px;
-  cursor:pointer;
-  padding:0;
+    display: none;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
 }
 
-/* Mobile menu */
 .mobile-menu {
-  display:none;
-  flex-direction:column;
-  background:#000;
-  border-top:1px solid #414754;
-  padding:0 16px;
-  width:100%;
-}
-.mobile-menu a {
-  color:#fff;
-  text-decoration:none;
-  padding:18px 0;
-  font-size:16px;
-  font-weight:bold;
-  border-bottom:1px solid #1a1a1a;
-}
-.mobile-menu a.active {
-  color:#adc7ff;
-}
-.mobile-menu.show {
-  display:flex;
+    display: none;
+    flex-direction: column;
+    padding: 10px 24px;
+    background: var(--navy);
+    border-top: 1px solid #26374c;
 }
 
-main {
-  padding-top:80px;
+.mobile-menu a {
+    padding: 13px 0;
+    color: white;
+    border-bottom: 1px solid #26374c;
+    font-weight: 600;
 }
+
+.mobile-menu a.active {
+    color: #58aaff;
+}
+
+.mobile-menu.show {
+    display: flex;
+}
+
+/* GENERAL */
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.section {
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 48px;
+}
+
+.eyebrow {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 34px;
+    line-height: 1.25;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+    margin: 0;
+}
+
+/* HERO */
+
 .hero {
-  padding:96px 16px;
-  border-bottom:1px solid #414754;
-  background:radial-gradient(circle at 2px 2px,#1e1e1e 1px,transparent 0);
-  background-size:40px 40px;
+    background:
+        radial-gradient(circle at 90% 20%, rgba(8,124,240,0.22), transparent 30%),
+        linear-gradient(135deg, #071426, #102c4b);
+    padding: 100px 24px;
+    color: white;
 }
+
 .hero-content {
-  max-width:1320px;
-  margin:0 auto;
+    max-width: 1150px;
+    margin: auto;
 }
-.tag {
-  color:#adc7ff;
-  font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:0.2em;
-  font-weight:600;
-  margin-bottom:16px;
-  display:block;
+
+.hero .eyebrow {
+    color: #76baff;
 }
-h1 {
-  font-size:40px;
-  font-weight:bold;
-  color:#ffffff;
-  margin:0 0 24px 0;
+
+.hero h1 {
+    max-width: 750px;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.15;
+    margin: 17px 0;
 }
-p {
-  color:#c1c6d7;
-  font-size:18px;
-  line-height:1.6;
+
+.hero p {
+    max-width: 690px;
+    color: #c9d7e8;
+    font-size: 17px;
+    margin-bottom: 30px;
 }
-section {
-  max-width:1320px;
-  margin:0 auto;
-  padding:80px 16px;
+
+.btn {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    padding: 14px 25px;
+    border-radius: 7px;
+    font-weight: 700;
+    transition: 0.3s;
 }
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:24px;
+
+.btn:hover {
+    background: #0065c9;
+    transform: translateY(-2px);
 }
-.card {
-  background:#121212;
-  border:1px solid #414754;
-  border-radius:12px;
-  padding:32px;
-  transition:0.3s;
+
+.btn-outline {
+    display: inline-block;
+    color: white;
+    border: 1px solid #8aa8c9;
+    padding: 13px 24px;
+    border-radius: 7px;
+    font-weight: 700;
+    margin-left: 10px;
 }
-.card:hover {
-  border-color:#adc7ff;
+
+.btn-outline:hover {
+    background: rgba(255,255,255,0.1);
 }
-.card h3 {
-  font-size:24px;
-  margin:0 0 16px 0;
-  color:#ffffff;
+
+/* INTRO */
+
+.intro {
+    background: white;
+    text-align: center;
 }
-.card p {
-  font-size:16px;
-  margin:0;
+
+.intro-text {
+    max-width: 850px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 17px;
 }
-.badge {
-  display:inline-block;
-  padding:4px 8px;
-  border:1px solid #414754;
-  font-size:11px;
-  text-transform:uppercase;
-  margin-right:8px;
-  margin-top:8px;
+
+/* SERVICES */
+
+.services-section {
+    background: var(--background);
 }
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 32px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    border-color: var(--blue);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(7,20,38,0.07);
+}
+
+.service-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-blue);
+    border-radius: 12px;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: var(--navy);
+    font-size: 23px;
+    margin: 0 0 12px;
+}
+
+.service-card p {
+    color: var(--muted);
+    margin: 0 0 17px;
+}
+
+.service-card h4 {
+    color: var(--navy);
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.service-card ul {
+    padding-left: 20px;
+    margin: 0 0 20px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.service-card li {
+    margin-bottom: 7px;
+}
+
+.service-link {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
+/* BENEFITS */
+
+.benefits {
+    background: white;
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.benefit-card {
+    padding: 27px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.benefit-card span {
+    font-size: 25px;
+}
+
+.benefit-card h3 {
+    color: var(--navy);
+    font-size: 18px;
+    margin: 12px 0 8px;
+}
+
+.benefit-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0;
+}
+
+/* PROCESS */
+
 .process {
-  background:#000;
-  border-top:1px solid #414754;
-  border-bottom:1px solid #414754;
+    background: var(--navy);
+    color: white;
 }
-.step {
-  text-align:center;
-  padding:24px;
-  background:#131313;
-  border:1px solid #414754;
-  border-radius:12px;
+
+.process .section-heading h2 {
+    color: white;
 }
-.step-num {
-  width:48px;
-  height:48px;
-  background:#adc7ff;
-  color:#000;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:bold;
-  margin:0 auto 16px auto;
+
+.process .section-heading p {
+    color: #bdcce0;
 }
-.cta {
-  background:#18181b;
-  border:1px solid #414754;
-  border-radius:16px;
-  padding:64px;
-  text-align:center;
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
+
+.process-card {
+    text-align: center;
+    padding: 25px 18px;
+    border: 1px solid #29415e;
+    border-radius: 12px;
+    background: #10243c;
+}
+
+.step-number {
+    width: 48px;
+    height: 48px;
+    background: var(--blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    font-weight: 800;
+}
+
+.process-card h3 {
+    font-size: 17px;
+    margin: 0 0 10px;
+}
+
+.process-card p {
+    font-size: 13px;
+    color: #bdcce0;
+    margin: 0;
+}
+
+/* CTA */
+
+.cta-section {
+    padding: 85px 24px;
+    background: var(--background);
+}
+
+.cta-box {
+    max-width: 1050px;
+    margin: auto;
+    padding: 55px 25px;
+    text-align: center;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.cta-box h2 {
+    color: var(--navy);
+    font-size: 32px;
+    margin: 0 0 14px;
+}
+
+.cta-box p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: var(--muted);
+}
+
+/* FOOTER */
+
 footer {
-  background:#000;
-  border-top:1px solid rgba(65,71,84,0.2);
-  padding:32px 16px;
-  text-align:center;
-  font-size:12px;
-  color:#c1c6d7;
+    background: #050f1d;
+    color: #bdcce0;
+    padding: 50px 24px 20px;
 }
-@media(max-width:768px){
-  nav {display:none;}
-  .menu-btn {display:block;}
-  h1 {font-size:32px;}
+
+.footer-content {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+footer h3 {
+    color: white;
+    font-size: 17px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #aebed1;
+    max-width: 380px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #bdcce0;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #58aaff;
+}
+
+.footer-bottom {
+    max-width: 1150px;
+    margin: 35px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #26374c;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 950px) {
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        padding: 75px 24px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .services-grid,
+    .benefit-grid,
+    .process-grid,
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+
+    .btn-outline {
+        margin: 12px 0 0;
+    }
+
+    .cta-box h2 {
+        font-size: 26px;
+    }
 }
 </style>
 </head>
+
 <body>
+
+<!-- HEADER -->
 
 <header>
 <div class="nav-wrap">
-  <div class="logo">⚙️ VETA</div>
-  
-  <nav>
+
+    <a href="index.html" class="logo">
+        <span class="logo-icon">M</span>
+        <span class="logo-text">
+            <strong>MARWA TECH</strong>
+            <small>COMPANY LTD</small>
+        </span>
+    </a>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="services.html" class="active">SERVICES</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="news.html">NEWS</a>
+        <a href="career.html">CAREER</a>
+        <a href="support.html">SUPPORT</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
     <a href="index.html">HOME</a>
     <a href="about.html">ABOUT</a>
     <a href="services.html" class="active">SERVICES</a>
+    <a href="products.html">PRODUCTS</a>
     <a href="gallery.html">GALLERY</a>
     <a href="news.html">NEWS</a>
     <a href="career.html">CAREER</a>
     <a href="support.html">SUPPORT</a>
     <a href="contact.html">CONTACT</a>
-  </nav>
-  
-  <button class="menu-btn" id="menuBtn">☰</button>
-</div>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">HOME</a>
-  <a href="about.html">ABOUT</a>
-  <a href="services.html" class="active">SERVICES</a>
-  <a href="gallery.html">GALLERY</a>
-  <a href="news.html">NEWS</a>
-  <a href="career.html">CAREER</a>
-  <a href="support.html">SUPPORT</a>
-  <a href="contact.html">CONTACT</a>
 </div>
 </header>
 
 <main>
+
+<!-- HERO -->
+
 <section class="hero">
-<div class="hero-content">
-<span class="tag">Engineered Integrity</span>
-<h1>Our Services</h1>
-<p>Leading the way in advanced technology and engineering solutions for a secure digital future. We architect robust systems that withstand the complexities of modern digital threats.</p>
+    <div class="hero-content">
+        <span class="eyebrow">OUR EXPERTISE</span>
+
+        <h1>Technology Solutions That Move Your Business Forward.</h1>
+
+        <p>
+            MARWA TECH COMPANY LTD provides technology services designed
+            to help businesses improve their operations, strengthen their
+            digital presence and embrace modern technology.
+        </p>
+
+        <a href="#our-services" class="btn">Explore Our Services</a>
+        <a href="contact.html" class="btn-outline">Talk To Our Team</a>
+    </div>
+</section>
+
+<!-- INTRODUCTION -->
+
+<section class="section intro">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">WHAT WE DO</span>
+            <h2>Comprehensive Technology Services</h2>
+        </div>
+
+        <p class="intro-text">
+            Every business has different technology needs. That is why
+            we provide a range of services covering website creation,
+            software development, cybersecurity, IT consulting,
+            cloud computing and network infrastructure. Our goal is
+            to deliver practical solutions that address real business
+            challenges and support long-term growth.
+        </p>
+    </div>
+</section>
+
+<!-- SIX SERVICES -->
+
+<section class="section services-section" id="our-services">
+<div class="container">
+
+    <div class="section-heading">
+        <span class="eyebrow">OUR SERVICES</span>
+        <h2>How We Can Help Your Business</h2>
+        <p>
+            Explore our technology services and discover solutions
+            that can support your organisation.
+        </p>
+    </div>
+
+    <div class="services-grid">
+
+        <!-- WEB DEVELOPMENT -->
+
+        <article class="service-card">
+            <div class="service-icon">🌐</div>
+
+            <h3>Web Development</h3>
+
+            <p>
+                We create professional, responsive and user-friendly
+                websites that help businesses establish a strong
+                online presence. From simple business websites to
+                advanced web platforms, we focus on usability,
+                performance and accessibility across different devices.
+            </p>
+
+            <h4>What this service includes:</h4>
+
+            <ul>
+                <li>Business and corporate websites.</li>
+                <li>E-commerce and online shopping platforms.</li>
+                <li>Custom web applications and portals.</li>
+                <li>Responsive mobile-friendly designs.</li>
+                <li>Website updates, maintenance and improvements.</li>
+                <li>Website performance and security improvements.</li>
+            </ul>
+
+            <a href="contact.html" class="service-link">Discuss a Website Project →</a>
+        </article>
+
+        <!-- SOFTWARE DEVELOPMENT -->
+
+        <article class="service-card">
+            <div class="service-icon">💻</div>
+
+            <h3>Software Development</h3>
+
+            <p>
+                We develop software solutions that help organisations
+                manage information, automate tasks and improve their
+                daily operations. Our focus is on understanding each
+                client's requirements and developing systems that
+                address their specific needs.
+            </p>
+
+            <h4>What this service includes:</h4>
+
+            <ul>
+                <li>Custom business management systems.</li>
+                <li>Inventory and stock management software.</li>
+                <li>School and organisational management systems.</li>
+                <li>Point of Sale (POS) applications.</li>
+                <li>Database design and management.</li>
+                <li>Desktop and web-based applications.</li>
+            </ul>
+
+            <a href="contact.html" class="service-link">Discuss a Software Project →</a>
+        </article>
+
+        <!-- CYBERSECURITY -->
+
+        <article class="service-card">
+            <div class="service-icon">🔒</div>
+
+            <h3>Cybersecurity Solutions</h3>
+
+            <p>
+                Protecting digital information and technology systems
+                is essential for every modern organisation. We provide
+                cybersecurity solutions aimed at improving system
+                protection, reducing security risks and helping
+                businesses safeguard their digital environments.
+            </p>
+
+            <h4>What this service includes:</h4>
+
+            <ul>
+                <li>Website and application security improvements.</li>
+                <li>Security assessments and vulnerability reviews.</li>
+                <li>User access and permission management.</li>
+                <li>Data protection recommendations.</li>
+                <li>Backup and recovery planning.</li>
+                <li>Security awareness guidance.</li>
+            </ul>
+
+            <a href="contact.html" class="service-link">Discuss Your Security Needs →</a>
+        </article>
+
+        <!-- IT CONSULTING -->
+
+        <article class="service-card">
+            <div class="service-icon">📊</div>
+
+            <h3>IT Consulting</h3>
+
+            <p>
+                Choosing the right technology can make a significant
+                difference to business performance. We help organisations
+                understand their technology needs, evaluate possible
+                solutions and plan effective ways to improve their
+                IT operations.
+            </p>
+
+            <h4>What this service includes:</h4>
+
+            <ul>
+                <li>Technology planning and recommendations.</li>
+                <li>IT infrastructure assessments.</li>
+                <li>Software and hardware guidance.</li>
+                <li>Digital transformation planning.</li>
+                <li>Technology project planning.</li>
+                <li>IT improvement recommendations.</li>
+            </ul>
+
+            <a href="contact.html" class="service-link">Request IT Consultation →</a>
+        </article>
+
+        <!-- CLOUD SERVICES -->
+
+        <article class="service-card">
+            <div class="service-icon">☁️</div>
+
+            <h3>Cloud Services</h3>
+
+            <p>
+                Cloud technology allows businesses to access applications,
+                information and computing resources over the internet.
+                We help organisations explore and implement cloud-based
+                solutions that support accessibility, flexibility
+                and efficient data management.
+            </p>
+
+            <h4>What this service includes:</h4>
+
+            <ul>
+                <li>Website and application hosting.</li>
+                <li>Cloud database configuration.</li>
+                <li>Cloud storage solutions.</li>
+                <li>Application deployment to cloud platforms.</li>
+                <li>Cloud migration assistance.</li>
+                <li>Cloud backup and recovery planning.</li>
+            </ul>
+
+            <a href="contact.html" class="service-link">Explore Cloud Solutions →</a>
+        </article>
+
+        <!-- NETWORK INFRASTRUCTURE -->
+
+        <article class="service-card">
+            <div class="service-icon">📡</div>
+
+            <h3>Network Infrastructure</h3>
+
+            <p>
+                Reliable networks keep businesses connected and allow
+                devices, computers and systems to communicate. We provide
+                network infrastructure solutions that help organisations
+                establish, maintain and improve their connectivity.
+            </p>
+
+            <h4>What this service includes:</h4>
+
+            <ul>
+                <li>Office network design and installation.</li>
+                <li>Router and switch configuration.</li>
+                <li>Wi-Fi setup and optimisation.</li>
+                <li>Structured network cabling.</li>
+                <li>Network troubleshooting and maintenance.</li>
+                <li>Network security configuration.</li>
+            </ul>
+
+            <a href="contact.html" class="service-link">Discuss Network Solutions →</a>
+        </article>
+
+    </div>
 </div>
 </section>
 
-<section>
-<div class="grid">
-<div class="card">
-<h3>🌐 Web Development</h3>
-<p>Scalable, high-performance web architectures built with React, Node.js, and specialized security protocols for enterprise-level resilience.</p>
-<div>
-<span class="badge">Next.js</span>
-<span class="badge">TypeScript</span>
-<span class="badge">WAF Integration</span>
-</div>
-</div>
+<!-- WHY CHOOSE US -->
 
-<div class="card">
-<h3>💻 Software Development</h3>
-<p>Custom engineering of mission-critical desktop and cross-platform applications using modern tech stacks.</p>
-</div>
+<section class="section benefits">
+<div class="container">
 
-<div class="card" style="border-color:rgba(173,199,255,0.3)">
-<h3>🔒 Cybersecurity Solutions</h3>
-<p>Offensive and defensive security strategies including penetration testing, threat modeling, and 24/7 SOC monitoring.</p>
-</div>
+    <div class="section-heading">
+        <span class="eyebrow">WHY WORK WITH US</span>
+        <h2>A Practical Approach to Technology</h2>
+        <p>
+            We aim to make technology easier to understand,
+            implement and manage.
+        </p>
+    </div>
 
-<div class="card">
-<h3>📊 IT Consulting</h3>
-<p>Strategic guidance for digital transformation, infrastructure auditing, and technical roadmap development.</p>
-</div>
+    <div class="benefit-grid">
 
-<div class="card">
-<h3>☁️ Cloud Services</h3>
-<p>Architecture and deployment on AWS, Azure, and GCP with a focus on high availability and automated disaster recovery.</p>
-</div>
+        <div class="benefit-card">
+            <span>🎯</span>
+            <h3>Solutions Built Around Your Needs</h3>
+            <p>
+                We begin by understanding your requirements so that
+                proposed solutions address your actual challenges.
+            </p>
+        </div>
 
-<div class="card">
-<h3>🌐 Network Infrastructure</h3>
-<p>Design and implementation of low-latency, high-bandwidth enterprise networks with integrated zero-trust security layers.</p>
-</div>
+        <div class="benefit-card">
+            <span>⚙️</span>
+            <h3>Practical Technology</h3>
+            <p>
+                We focus on useful technology solutions that support
+                productivity and improve business processes.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <span>🤝</span>
+            <h3>Clear Communication</h3>
+            <p>
+                We value collaboration, transparency and keeping
+                clients informed throughout their projects.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <span>📈</span>
+            <h3>Room to Grow</h3>
+            <p>
+                We consider future requirements when planning
+                solutions for businesses and organisations.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <span>🛡️</span>
+            <h3>Security Awareness</h3>
+            <p>
+                We consider data protection and security when
+                planning and implementing technology solutions.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <span>💡</span>
+            <h3>Continuous Improvement</h3>
+            <p>
+                We believe technology should adapt as business
+                requirements and opportunities change.
+            </p>
+        </div>
+
+    </div>
 </div>
 </section>
 
-<section class="process">
-<h2 style="text-align:center;font-size:32px;margin:0 0 16px 0">Our Methodical Approach</h2>
-<p style="text-align:center;max-width:600px;margin:0 auto 48px auto">We follow a strict engineering lifecycle to ensure every deployment meets VETA's standards for performance and security.</p>
-<div class="grid">
-<div class="step">
-<div class="step-num">01</div>
-<h4 style="font-size:20px;margin:0 0 12px 0">Consultation</h4>
-<p style="font-size:14px;margin:0">Deep dive into technical requirements and security compliance needs.</p>
-</div>
-<div class="step">
-<div class="step-num">02</div>
-<h4 style="font-size:20px;margin:0 0 12px 0">Planning</h4>
-<p style="font-size:14px;margin:0">Architectural blueprints and threat modeling for long-term scalability.</p>
-</div>
-<div class="step">
-<div class="step-num">03</div>
-<h4 style="font-size:20px;margin:0 0 12px 0">Development</h4>
-<p style="font-size:14px;margin:0">Agile execution using clean code principles and continuous security testing.</p>
-</div>
-<div class="step">
-<div class="step-num">04</div>
-<h4 style="font-size:20px;margin:0 0 12px 0">Deployment</h4>
-<p style="font-size:14px;margin:0">Seamless go-live with comprehensive monitoring and support.</p>
-</div>
+<!-- OUR PROCESS -->
+
+<section class="section process">
+<div class="container">
+
+    <div class="section-heading">
+        <span class="eyebrow">HOW WE WORK</span>
+        <h2>Our Project Development Process</h2>
+        <p>
+            We follow a structured approach to understand,
+            plan and deliver technology projects.
+        </p>
+    </div>
+
+    <div class="process-grid">
+
+        <div class="process-card">
+            <div class="step-number">01</div>
+            <h3>Consultation</h3>
+            <p>
+                We listen to your ideas, understand your challenges
+                and identify your project requirements.
+            </p>
+        </div>
+
+        <div class="process-card">
+            <div class="step-number">02</div>
+            <h3>Planning</h3>
+            <p>
+                We define the project scope, identify suitable
+                technologies and prepare an implementation plan.
+            </p>
+        </div>
+
+        <div class="process-card">
+            <div class="step-number">03</div>
+            <h3>Development</h3>
+            <p>
+                We work on the agreed solution, test its functionality
+                and make necessary improvements.
+            </p>
+        </div>
+
+        <div class="process-card">
+            <div class="step-number">04</div>
+            <h3>Deployment</h3>
+            <p>
+                We prepare the completed solution for use and
+                provide agreed handover or support.
+            </p>
+        </div>
+
+    </div>
 </div>
 </section>
 
-<section>
-<div class="cta">
-<h2 style="font-size:32px;margin:0 0 24px 0">Start Your Project With Us</h2>
-<p style="max-width:600px;margin:0 auto 32px auto">Secure your digital future today. Our engineering team is ready to analyze your requirements and provide a robust technical proposal.</p>
-<a href="contact.html" style="display:inline-block;background:#adc7ff;color:#000;padding:16px 32px;font-weight:bold;border-radius:8px;text-decoration:none">Contact Expert Team</a>
-</div>
+<!-- CONTACT CTA -->
+
+<section class="cta-section">
+    <div class="cta-box">
+        <span class="eyebrow">LET'S WORK TOGETHER</span>
+
+        <h2>Have a Technology Project in Mind?</h2>
+
+        <p>
+            Whether you need a website, custom software, improved
+            cybersecurity, cloud services or network infrastructure,
+            MARWA TECH COMPANY LTD is ready to discuss your requirements.
+        </p>
+
+        <a href="contact.html" class="btn">Start Your Project →</a>
+    </div>
 </section>
+
 </main>
 
+<!-- FOOTER -->
+
 <footer>
-⚙️ VETA © 2026 VETA COMPANY LTD. All rights reserved.
-<div style="margin-top:12px">
-<a href="privacy.html" style="color:#c1c6d7;margin:0 8px;text-decoration:none">Privacy</a>
-<a href="terms.html" style="color:#c1c6d7;margin:0 8px;text-decoration:none">Terms</a>
-<a href="contact.html" style="color:#c1c6d7;margin:0 8px;text-decoration:none">Contact</a>
+<div class="footer-content">
+
+    <div>
+        <a href="index.html" class="logo">
+            <span class="logo-icon">M</span>
+            <span class="logo-text">
+                <strong>MARWA TECH</strong>
+                <small>COMPANY LTD</small>
+            </span>
+        </a>
+
+        <p>
+            Providing technology solutions that help businesses
+            connect, innovate and grow through modern digital services.
+        </p>
+    </div>
+
+    <div>
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <div>
+        <h3>Our Services</h3>
+        <div class="footer-links">
+            <a href="#our-services">Web Development</a>
+            <a href="#our-services">Software Development</a>
+            <a href="#our-services">Cybersecurity</a>
+            <a href="#our-services">IT Consulting</a>
+            <a href="#our-services">Cloud Services</a>
+            <a href="#our-services">Network Infrastructure</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer-bottom">
+    &copy; 2026 MARWA TECH COMPANY LTD. All Rights Reserved.
 </div>
 </footer>
 
@@ -342,13 +1060,17 @@ const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
 menuBtn.addEventListener('click', () => {
-  mobileMenu.classList.toggle('show');
+    const isOpen = mobileMenu.classList.toggle('show');
+    menuBtn.setAttribute('aria-expanded', isOpen);
+    menuBtn.textContent = isOpen ? '✕' : '☰';
 });
 
 document.querySelectorAll('.mobile-menu a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('show');
-  });
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('show');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.textContent = '☰';
+    });
 });
 </script>
 
