@@ -1,256 +1,829 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VETA | Support Center</title>
+<title>Support Centre | MARWA TECH COMPANY LTD</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-* { box-sizing: border-box; }
+:root {
+  --navy: #071426;
+  --navy-light: #0d2039;
+  --blue: #087cf0;
+  --white: #ffffff;
+  --muted: #aab8ca;
+  --border: rgba(255,255,255,0.10);
+  --card: #0c1c30;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin:0;
-  padding:0;
-  background:#121414;
-  color:#e2e2e2;
-  font-family:Arial,sans-serif;
+  margin: 0;
+  background: var(--navy);
+  color: var(--white);
+  font-family: 'DM Sans', Arial, sans-serif;
 }
+
 header {
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:100;
-  background:#1a1c1c;
-  border-bottom:1px solid #333535;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(7,20,38,0.97);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
 }
+
 .nav-wrap {
-  max-width:1200px;
-  margin:0 auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:12px 16px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
 }
+
 .logo {
-  color:#b3c5ff;
-  font-weight:bold;
-  font-size:20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 19px;
 }
 
-/* Desktop nav */
+.logo-mark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  background: var(--blue);
+  border-radius: 9px;
+  font-size: 22px;
+}
+
+.logo small {
+  display: block;
+  color: #9eafc4;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 2px;
+}
+
 nav {
-  display:flex;
+  display: flex;
+  align-items: center;
+  gap: 17px;
 }
+
 nav a {
-  color:#cccccc;
-  text-decoration:none;
-  margin:0 10px;
-  font-size:14px;
-  text-transform:uppercase;
+  color: #c5d0df;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  transition: 0.2s;
 }
+
+nav a:hover,
 nav a.active {
-  color:#b3c5ff;
-  font-weight:bold;
-}
-nav a:hover {
-  color:#b3c5ff;
+  color: #42a0ff;
 }
 
-/* Hamburger button */
 .menu-btn {
-  display:none;
-  background:none;
-  border:none;
-  color:#e2e2e2;
-  font-size:32px;
-  cursor:pointer;
-  padding:0;
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 29px;
+  cursor: pointer;
 }
 
-/* Mobile menu */
 .mobile-menu {
-  display:none;
-  flex-direction:column;
-  background:#1a1c1c;
-  border-top:1px solid #333535;
-  padding:0 16px;
-  width:100%;
+  display: none;
+  flex-direction: column;
+  background: var(--navy);
+  padding: 0 20px;
+  border-top: 1px solid var(--border);
 }
+
 .mobile-menu a {
-  color:#fff;
-  text-decoration:none;
-  padding:18px 0;
-  font-size:16px;
-  font-weight:bold;
-  border-bottom:1px solid #262626;
+  color: white;
+  text-decoration: none;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
 }
+
 .mobile-menu a.active {
-  color:#b3c5ff;
+  color: #42a0ff;
 }
+
 .mobile-menu.show {
-  display:flex;
+  display: flex;
 }
 
 main {
-  padding-top:80px;
+  padding-top: 70px;
 }
+
 section {
-  padding:64px 16px;
-  max-width:900px;
-  margin:0 auto;
+  max-width: 1100px;
+  margin: auto;
+  padding: 65px 20px;
 }
+
 .hero {
-  border-bottom:1px solid #333535;
-  text-align:center;
+  text-align: center;
+  padding-top: 95px;
+  padding-bottom: 75px;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(8,124,240,0.18), transparent 55%);
 }
+
+.eyebrow {
+  display: inline-block;
+  color: #56a9ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
 .hero h1 {
-  font-size:36px;
-  font-weight:bold;
-  margin:0 0 16px 0;
-  color:#ffffff;
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.15;
+  margin: 0 0 17px;
 }
+
 .hero p {
-  color:#c2c6d8;
-  font-size:16px;
-  margin:0 0 32px 0;
+  color: var(--muted);
+  max-width: 650px;
+  margin: 0 auto 30px;
+  line-height: 1.8;
 }
-.hero input {
-  width:100%;
-  max-width:600px;
-  padding:16px;
-  background:#1e2020;
-  border:1px solid #333535;
-  border-radius:12px;
-  color:#e2e2e2;
-  font-size:16px;
+
+.search-box {
+  max-width: 620px;
+  margin: auto;
 }
+
+.search-box input {
+  width: 100%;
+  padding: 17px 20px;
+  background: #10243d;
+  border: 1px solid #29415e;
+  border-radius: 10px;
+  color: white;
+  font: inherit;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: var(--blue);
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  font-size: 28px;
+  margin: 0 0 10px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.7;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px;
+}
+
 .faq-card {
-  background:#1a1c1c;
-  border:1px solid #262626;
-  border-radius:12px;
-  padding:24px;
-  margin-bottom:16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 25px;
+  transition: 0.2s;
 }
+
+.faq-card:hover {
+  border-color: rgba(8,124,240,0.6);
+  transform: translateY(-2px);
+}
+
 .faq-card h3 {
-  font-size:18px;
-  font-weight:bold;
-  margin:0 0 12px 0;
+  margin: 0 0 12px;
+  font-size: 17px;
 }
+
 .faq-card p {
-  color:#c2c6d8;
-  line-height:1.6;
-  margin:0;
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 0;
+  font-size: 14px;
 }
+
+.no-results {
+  display: none;
+  color: var(--muted);
+  padding: 20px 0;
+}
+
+.support-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.option-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 25px;
+}
+
+.option-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: rgba(8,124,240,0.15);
+  border-radius: 10px;
+  font-size: 21px;
+  margin-bottom: 17px;
+}
+
+.option-card h3 {
+  margin: 0 0 10px;
+  font-size: 17px;
+}
+
+.option-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.option-card a {
+  display: inline-block;
+  color: #56a9ff;
+  margin-top: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 14px;
+}
+
 .cta {
-  margin:64px 16px;
-  padding:32px;
-  background:#1a1c1c;
-  border:1px solid rgba(179,197,255,0.2);
-  border-radius:12px;
-  text-align:center;
+  max-width: 1060px;
+  margin: 10px auto 65px;
+  padding: 45px 25px;
+  background: linear-gradient(120deg, #0d2d50, #0b1c31);
+  border: 1px solid rgba(8,124,240,0.35);
+  border-radius: 16px;
+  text-align: center;
 }
+
 .cta h2 {
-  font-size:24px;
-  margin:0 0 12px 0;
+  margin: 0 0 12px;
+  font-size: 27px;
 }
+
 .cta p {
-  color:#c2c6d8;
-  margin:0 0 24px 0;
+  color: var(--muted);
+  margin: 0 0 25px;
+  line-height: 1.7;
 }
-.cta a {
-  display:inline-block;
-  background:#0066ff;
-  color:#ffffff;
-  padding:16px 32px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:bold;
+
+.btn {
+  display: inline-block;
+  background: var(--blue);
+  color: white;
+  padding: 14px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
 }
+
 footer {
-  background:#1a1c1c;
-  border-top:1px solid #333535;
-  padding:32px 16px;
-  text-align:center;
-  font-size:12px;
-  color:#8c90a1;
+  background: #050e1a;
+  border-top: 1px solid var(--border);
+  padding: 30px 20px;
+  text-align: center;
+  color: #8292a8;
+  font-size: 13px;
 }
-@media(max-width:768px){
-  nav {display:none;}
-  .menu-btn {display:block;}
-  .hero h1 {font-size:28px;}
+
+/* CHAT ASSISTANT */
+
+.chat-launcher {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 20px;
+  background: var(--blue);
+  color: white;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+
+.chat-launcher:hover {
+  background: #0066ce;
+}
+
+.chat-window {
+  display: none;
+  position: fixed;
+  right: 24px;
+  bottom: 90px;
+  width: min(370px, calc(100vw - 30px));
+  height: 500px;
+  max-height: calc(100vh - 120px);
+  z-index: 200;
+  background: #0c1c30;
+  border: 1px solid #29415e;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 55px rgba(0,0,0,0.5);
+}
+
+.chat-window.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  background: #0b2b4d;
+  padding: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.bot-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--blue);
+  display: grid;
+  place-items: center;
+  font-size: 19px;
+}
+
+.chat-brand strong {
+  display: block;
+  font-size: 14px;
+}
+
+.chat-brand small {
+  display: block;
+  color: #b7c9dc;
+  margin-top: 3px;
+  font-size: 11px;
+}
+
+.chat-close {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message {
+  max-width: 88%;
+  padding: 11px 13px;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background: #172c44;
+  color: #e6edf6;
+  border-bottom-left-radius: 3px;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: var(--blue);
+  color: white;
+  border-bottom-right-radius: 3px;
+}
+
+.quick-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 0 14px 12px;
+}
+
+.quick-questions button {
+  background: transparent;
+  border: 1px solid #35516f;
+  border-radius: 20px;
+  color: #c8d9eb;
+  padding: 7px 10px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.quick-questions button:hover {
+  border-color: var(--blue);
+  color: white;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid var(--border);
+  background: #091729;
+}
+
+.chat-input-area input {
+  flex: 1;
+  min-width: 0;
+  background: #142941;
+  border: 1px solid #29415e;
+  border-radius: 8px;
+  padding: 12px;
+  color: white;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.chat-input-area button {
+  background: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.chat-note {
+  color: #8292a8;
+  font-size: 10px;
+  text-align: center;
+  padding: 0 10px 9px;
+  background: #091729;
+}
+
+@media(max-width: 900px) {
+  nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+@media(max-width: 650px) {
+  .faq-grid,
+  .support-options {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 75px;
+  }
+
+  section {
+    padding: 48px 18px;
+  }
+
+  .cta {
+    margin: 10px 15px 50px;
+  }
+
+  .chat-launcher {
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .chat-window {
+    right: 15px;
+    bottom: 78px;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="nav-wrap">
-  <div class="logo">VETA</div>
-  
-  <nav>
+  <div class="nav-wrap">
+
+    <a href="index.html" class="logo">
+      <span class="logo-mark">M</span>
+      <span>
+        MARWA TECH
+        <small>COMPANY LTD</small>
+      </span>
+    </a>
+
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="products.html">PRODUCTS</a>
+      <a href="gallery.html">GALLERY</a>
+      <a href="news.html">NEWS</a>
+      <a href="career.html">CAREER</a>
+      <a href="support.html" class="active">SUPPORT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu">☰</button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">HOME</a>
     <a href="about.html">ABOUT</a>
     <a href="services.html">SERVICES</a>
+    <a href="products.html">PRODUCTS</a>
     <a href="gallery.html">GALLERY</a>
     <a href="news.html">NEWS</a>
     <a href="career.html">CAREER</a>
     <a href="support.html" class="active">SUPPORT</a>
     <a href="contact.html">CONTACT</a>
-  </nav>
-  
-  <button class="menu-btn" id="menuBtn">☰</button>
-</div>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">HOME</a>
-  <a href="about.html">ABOUT</a>
-  <a href="services.html">SERVICES</a>
-  <a href="gallery.html">GALLERY</a>
-  <a href="news.html">NEWS</a>
-  <a href="career.html">CAREER</a>
-  <a href="support.html" class="active">SUPPORT</a>
-  <a href="contact.html">CONTACT</a>
-</div>
+  </div>
 </header>
 
 <main>
-<section class="hero">
-  <div style="max-width:800px;margin:0 auto">
-    <h1>How can we help?</h1>
-    <p>Search technical documentation and troubleshooting guides</p>
-    <input type="text" placeholder="Search support articles...">
+
+  <section class="hero">
+    <span class="eyebrow">MARWA TECH SUPPORT</span>
+    <h1>How can we help you?</h1>
+    <p>
+      Find answers to common questions about our technology services.
+      You can also chat with our support assistant for quick guidance.
+    </p>
+
+    <div class="search-box">
+      <input
+        type="search"
+        id="faqSearch"
+        placeholder="Search support questions..."
+        aria-label="Search frequently asked questions"
+      >
+    </div>
+  </section>
+
+  <section>
+    <div class="section-heading">
+      <span class="eyebrow">HELP CENTRE</span>
+      <h2>Frequently Asked Questions</h2>
+      <p>Some common questions about working with MARWA TECH.</p>
+    </div>
+
+    <div class="faq-grid" id="faqGrid">
+
+      <article class="faq-card">
+        <h3>What services does MARWA TECH offer?</h3>
+        <p>
+          We offer web development, software development, cybersecurity
+          solutions, IT consulting, cloud services and network infrastructure.
+          Contact our team to discuss what your organisation needs.
+        </p>
+      </article>
+
+      <article class="faq-card">
+        <h3>Can you build a website for my business?</h3>
+        <p>
+          Yes. We can discuss a website based on your business goals,
+          required features and budget. Contact us with a description
+          of what you would like to build.
+        </p>
+      </article>
+
+      <article class="faq-card">
+        <h3>Do you develop custom software?</h3>
+        <p>
+          We offer software development services. Share the problem
+          you want the software to solve so our team can discuss
+          the possible solution with you.
+        </p>
+      </article>
+
+      <article class="faq-card">
+        <h3>Can you help with office networks?</h3>
+        <p>
+          Yes. Network infrastructure is one of our service areas.
+          Tell us about your office setup and the network support
+          you are looking for.
+        </p>
+      </article>
+
+      <article class="faq-card">
+        <h3>Do you provide cybersecurity solutions?</h3>
+        <p>
+          We offer cybersecurity solutions. Contact us to explain
+          your security concerns and discuss the support your
+          organisation may require.
+        </p>
+      </article>
+
+      <article class="faq-card">
+        <h3>How do I request technical support?</h3>
+        <p>
+          Visit our Contact page and send us a message explaining
+          the issue. Include relevant details so our team can
+          understand what assistance you need.
+        </p>
+      </article>
+
+      <article class="faq-card">
+        <h3>How much do your services cost?</h3>
+        <p>
+          Costs depend on the type of service, project size and
+          requirements. Contact us with your project details
+          to discuss a suitable quotation.
+        </p>
+      </article>
+
+      <article class="faq-card">
+        <h3>Where does MARWA TECH operate?</h3>
+        <p>
+          Please contact our team for information about our
+          service locations and whether we can support your
+          particular project.
+        </p>
+      </article>
+
+    </div>
+
+    <p class="no-results" id="noResults">
+      No matching questions found. Try another search or chat with our support assistant.
+    </p>
+  </section>
+
+  <section>
+    <div class="section-heading">
+      <span class="eyebrow">SUPPORT OPTIONS</span>
+      <h2>How can we assist you?</h2>
+      <p>Choose the best way to get help with your technology needs.</p>
+    </div>
+
+    <div class="support-options">
+
+      <div class="option-card">
+        <div class="option-icon">💬</div>
+        <h3>Chat with our assistant</h3>
+        <p>
+          Ask common questions and get quick guidance from
+          the support assistant on this page.
+        </p>
+      </div>
+
+      <div class="option-card">
+        <div class="option-icon">🛠️</div>
+        <h3>Technical Support</h3>
+        <p>
+          Tell us about a technical issue or service you
+          need help with.
+        </p>
+        <a href="contact.html">Request assistance →</a>
+      </div>
+
+      <div class="option-card">
+        <div class="option-icon">🤝</div>
+        <h3>Project Enquiries</h3>
+        <p>
+          Discuss a website, software project, network
+          setup or other technology requirement.
+        </p>
+        <a href="contact.html">Talk to our team →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="cta">
+    <h2>Still need help?</h2>
+    <p>
+      Send our team a message and explain what you need.
+      We will be able to understand your request and advise on the next step.
+    </p>
+    <a href="contact.html" class="btn">Contact MARWA TECH</a>
   </div>
-</section>
 
-<section>
-<h2 style="font-size:24px;font-weight:bold;margin:0 0 24px 0;color:#ffffff">Frequently Asked Questions</h2>
-
-<div class="faq-card">
-<h3>How do I reset my API key?</h3>
-<p>Go to Security Dashboard > Account Settings > Active Keys > Revoke & Regenerate. Note: Revoking immediately terminates active sessions.</p>
-</div>
-
-<div class="faq-card">
-<h3>What are your support hours?</h3>
-<p>Standard: 08:00-20:00 UTC Mon-Fri. Enterprise clients get 24/7/365 priority support.</p>
-</div>
-
-<div class="faq-card">
-<h3>Do you offer enterprise SLAs?</h3>
-<p>Yes. 99.99% uptime SLA with automatic service credits if we fail to meet targets.</p>
-</div>
-</section>
-
-<section class="cta">
-<h2>Still need help?</h2>
-<p>Our engineering team is ready for technical consultations.</p>
-<a href="contact.html">Contact Support</a>
-</section>
+</main>
 
 <footer>
-© 2026 VETA COMPANY LTD. All rights reserved.
+  © 2026 MARWA TECH COMPANY LTD. All rights reserved.
 </footer>
 
+
+<!-- CHAT ASSISTANT -->
+
+<button class="chat-launcher" id="chatLauncher" aria-label="Open support assistant">
+  <span>✦</span> Chat with us
+</button>
+
+<div class="chat-window" id="chatWindow">
+
+  <div class="chat-header">
+    <div class="chat-brand">
+      <div class="bot-avatar">✦</div>
+      <div>
+        <strong>MARWA TECH Assistant</strong>
+        <small>Automated support assistant</small>
+      </div>
+    </div>
+
+    <button class="chat-close" id="chatClose" aria-label="Close chat">×</button>
+  </div>
+
+  <div class="chat-messages" id="chatMessages" aria-live="polite">
+    <div class="message bot">
+      Hello! 👋 Welcome to MARWA TECH.
+
+      I'm the website support assistant. You can ask me about our services, websites, software, cybersecurity, networking or how to contact our team.
+
+      What would you like help with?
+    </div>
+  </div>
+
+  <div class="quick-questions">
+    <button type="button" data-question="What services do you offer?">Our services</button>
+    <button type="button" data-question="How can I request a website?">Website enquiry</button>
+    <button type="button" data-question="How can I contact your team?">Contact details</button>
+  </div>
+
+  <form class="chat-input-area" id="chatForm">
+    <input
+      type="text"
+      id="chatInput"
+      placeholder="Type your question..."
+      autocomplete="off"
+      required
+    >
+    <button type="submit">Send</button>
+  </form>
+
+  <div class="chat-note">
+    Automated assistant · For further help, contact our team.
+  </div>
+
+</div>
+
+
 <script>
+// MOBILE NAVIGATION
+
 const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
@@ -263,6 +836,217 @@ document.querySelectorAll('.mobile-menu a').forEach(link => {
     mobileMenu.classList.remove('show');
   });
 });
+
+
+// FAQ SEARCH
+
+const faqSearch = document.getElementById('faqSearch');
+const faqCards = document.querySelectorAll('.faq-card');
+const noResults = document.getElementById('noResults');
+
+faqSearch.addEventListener('input', () => {
+  const searchText = faqSearch.value.toLowerCase().trim();
+  let visibleCount = 0;
+
+  faqCards.forEach(card => {
+    const matches = card.textContent.toLowerCase().includes(searchText);
+
+    card.style.display = matches ? 'block' : 'none';
+
+    if (matches) visibleCount++;
+  });
+
+  noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+});
+
+
+// CHAT WINDOW
+
+const chatLauncher = document.getElementById('chatLauncher');
+const chatWindow = document.getElementById('chatWindow');
+const chatClose = document.getElementById('chatClose');
+const chatForm = document.getElementById('chatForm');
+const chatInput = document.getElementById('chatInput');
+const chatMessages = document.getElementById('chatMessages');
+
+chatLauncher.addEventListener('click', () => {
+  chatWindow.classList.add('open');
+  chatInput.focus();
+});
+
+chatClose.addEventListener('click', () => {
+  chatWindow.classList.remove('open');
+});
+
+
+// DISPLAY CHAT MESSAGES
+
+function addMessage(message, sender) {
+  const messageElement = document.createElement('div');
+
+  messageElement.className = 'message ' + sender;
+
+  // textContent prevents user input from being treated as HTML
+  messageElement.textContent = message;
+
+  chatMessages.appendChild(messageElement);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+
+// SIMPLE SUPPORT RESPONSE SYSTEM
+
+function getBotResponse(question) {
+  const text = question.toLowerCase();
+
+  if (
+    text.includes('hello') ||
+    text.includes('hi') ||
+    text.includes('hey') ||
+    text.includes('habari')
+  ) {
+    return 'Hello! Karibu to MARWA TECH. How can I help you today? You can ask about our services, projects or technical support.';
+  }
+
+  if (
+    text.includes('service') ||
+    text.includes('what do you do') ||
+    text.includes('offer')
+  ) {
+    return 'MARWA TECH offers six main service areas: Web Development, Software Development, Cybersecurity Solutions, IT Consulting, Cloud Services and Network Infrastructure. Which one would you like to know more about?';
+  }
+
+  if (
+    text.includes('website') ||
+    text.includes('web development')
+  ) {
+    return 'We offer web development services for businesses and organisations. Tell us what kind of website you need, the main features you want and your expected timeline. You can also send your enquiry through our Contact page.';
+  }
+
+  if (
+    text.includes('software') ||
+    text.includes('application') ||
+    text.includes('app')
+  ) {
+    return 'We offer software development services. Tell us what problem you want your application or system to solve. Our team can discuss your requirements and possible next steps.';
+  }
+
+  if (
+    text.includes('cyber') ||
+    text.includes('security') ||
+    text.includes('hack')
+  ) {
+    return 'Cybersecurity is one of our service areas. If you have a security concern, describe it without sharing passwords, private keys or sensitive account information. For detailed assistance, contact our team.';
+  }
+
+  if (
+    text.includes('network') ||
+    text.includes('wifi') ||
+    text.includes('internet') ||
+    text.includes('router')
+  ) {
+    return 'We offer network infrastructure services. Let us know whether you need a new office network, network troubleshooting or another type of networking support.';
+  }
+
+  if (
+    text.includes('cloud') ||
+    text.includes('hosting') ||
+    text.includes('server')
+  ) {
+    return 'Cloud services are among our service areas. Tell us whether you need cloud setup, hosting guidance, data solutions or help planning a cloud project.';
+  }
+
+  if (
+    text.includes('consult') ||
+    text.includes('it support') ||
+    text.includes('technical support') ||
+    text.includes('problem')
+  ) {
+    return 'We can help you discuss your IT support requirements. Describe the issue, what you were trying to do and any error message you received. Please do not share passwords or confidential information.';
+  }
+
+  if (
+    text.includes('price') ||
+    text.includes('cost') ||
+    text.includes('quote') ||
+    text.includes('quotation') ||
+    text.includes('budget')
+  ) {
+    return 'Project costs depend on the work involved, features and requirements. Please send us a short description of your project through the Contact page so the team can discuss a suitable quotation.';
+  }
+
+  if (
+    text.includes('contact') ||
+    text.includes('email') ||
+    text.includes('phone') ||
+    text.includes('reach')
+  ) {
+    return 'You can reach our team through the Contact page on this website. Visit contact.html and send your enquiry. Please check the company contact details published there before using them.';
+  }
+
+  if (
+    text.includes('location') ||
+    text.includes('where are you') ||
+    text.includes('office')
+  ) {
+    return 'For our current office location and service coverage, please use the Contact page or ask our team directly. I do not want to give you an unverified address.';
+  }
+
+  if (
+    text.includes('career') ||
+    text.includes('job') ||
+    text.includes('vacancy') ||
+    text.includes('work with you')
+  ) {
+    return 'Thank you for your interest in working with MARWA TECH. Visit our Career page for information and use the Contact page to ask about current opportunities.';
+  }
+
+  if (
+    text.includes('thank')
+  ) {
+    return 'You are welcome! Karibu tena. Is there anything else about MARWA TECH I can help you with?';
+  }
+
+  return 'Thanks for your question. I do not have enough information to answer that accurately yet. Please visit our Contact page and send the team your question so they can assist you.';
+}
+
+
+// SEND A MESSAGE
+
+chatForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const question = chatInput.value.trim();
+
+  if (!question) return;
+
+  addMessage(question, 'user');
+
+  chatInput.value = '';
+
+  const response = getBotResponse(question);
+
+  // Small delay to make the conversation feel natural
+  setTimeout(() => {
+    addMessage(response, 'bot');
+  }, 400);
+});
+
+
+// QUICK QUESTION BUTTONS
+
+document.querySelectorAll('.quick-questions button').forEach(button => {
+  button.addEventListener('click', () => {
+    const question = button.dataset.question;
+
+    addMessage(question, 'user');
+
+    setTimeout(() => {
+      addMessage(getBotResponse(question), 'bot');
+    }, 400);
+  });
+});
+
 </script>
 
 </body>
