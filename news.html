@@ -1,264 +1,623 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VETA | News</title>
+<title>News & Insights | MARWA TECH COMPANY LTD</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-* { box-sizing: border-box; }
+:root {
+  --navy: #071426;
+  --card: #0d1e32;
+  --blue: #087cf0;
+  --white: #ffffff;
+  --muted: #aab8ca;
+  --border: rgba(255,255,255,0.10);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin:0;
-  padding:0;
-  background:#111415;
-  color:#e1e3e4;
-  font-family:Arial,sans-serif;
+  margin: 0;
+  background: var(--navy);
+  color: var(--white);
+  font-family: 'DM Sans', Arial, sans-serif;
 }
+
 header {
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:100;
-  background:#191c1d;
-  border-bottom:1px solid #4c4546;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(7,20,38,0.97);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
 }
+
 .nav-wrap {
-  max-width:1200px;
-  margin:0 auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:12px 16px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
 }
+
 .logo {
-  color:#c6c6c6;
-  font-weight:bold;
-  font-size:20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 19px;
 }
 
-/* Desktop nav */
+.logo-mark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  background: var(--blue);
+  border-radius: 9px;
+  font-size: 22px;
+}
+
+.logo small {
+  display: block;
+  color: #9eafc4;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 2px;
+}
+
 nav {
-  display:flex;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
+
 nav a {
-  color:#cfc4c5;
-  text-decoration:none;
-  margin:0 10px;
-  font-size:14px;
-  text-transform:uppercase;
+  color: #c5d0df;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  transition: 0.2s;
 }
+
+nav a:hover,
 nav a.active {
-  color:#adc7ff;
-  font-weight:bold;
-}
-nav a:hover {
-  color:#adc7ff;
+  color: #42a0ff;
 }
 
-/* Hamburger button */
 .menu-btn {
-  display:none;
-  background:none;
-  border:none;
-  color:#e1e3e4;
-  font-size:32px;
-  cursor:pointer;
-  padding:0;
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 29px;
+  cursor: pointer;
 }
 
-/* Mobile menu */
 .mobile-menu {
-  display:none;
-  flex-direction:column;
-  background:#191c1d;
-  border-top:1px solid #4c4546;
-  padding:0 16px;
-  width:100%;
+  display: none;
+  flex-direction: column;
+  background: var(--navy);
+  padding: 0 20px;
+  border-top: 1px solid var(--border);
 }
+
 .mobile-menu a {
-  color:#fff;
-  text-decoration:none;
-  padding:18px 0;
-  font-size:16px;
-  font-weight:bold;
-  border-bottom:1px solid #2a2d2e;
+  color: white;
+  text-decoration: none;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
 }
+
 .mobile-menu a.active {
-  color:#adc7ff;
+  color: #42a0ff;
 }
+
 .mobile-menu.show {
-  display:flex;
+  display: flex;
 }
 
 main {
-  padding-top:80px;
-  padding-bottom:40px;
+  padding-top: 70px;
 }
-section {
-  padding:40px 16px;
-  max-width:1000px;
-  margin:0 auto;
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 0 20px;
 }
+
 .hero {
-  position:relative;
-  width:100%;
-  height:400px;
-  overflow:hidden;
+  padding: 65px 0 35px;
 }
-.hero img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
+
+.eyebrow {
+  display: inline-block;
+  color: #56a9ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
 }
-.hero-overlay {
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
-  padding:24px;
-  background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);
+
+.hero h1 {
+  font-size: clamp(34px, 5vw, 50px);
+  line-height: 1.15;
+  margin: 0 0 15px;
 }
-.badge {
-  display:inline-block;
-  background:#007BFF;
-  color:#ffffff;
-  padding:4px 8px;
-  font-size:12px;
-  margin-bottom:8px;
+
+.hero p {
+  color: var(--muted);
+  max-width: 650px;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
 }
-h1 {
-  font-size:28px;
-  font-weight:bold;
-  color:#ffffff;
-  margin:0 0 8px 0;
+
+.featured {
+  position: relative;
+  height: 440px;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 15px 0 65px;
+  background: #10243d;
 }
-h3 {
-  font-size:20px;
-  font-weight:bold;
-  color:#e1e3e4;
-  margin:0 0 8px 0;
+
+.featured img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
-p {
-  color:#cfc4c5;
-  font-size:14px;
-  margin:0;
+
+.featured::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(3,12,24,0.95),
+    rgba(3,12,24,0.05) 85%
+  );
 }
-.article {
-  display:flex;
-  gap:16px;
-  border-bottom:1px solid #4c4546;
-  padding-bottom:24px;
-  margin-bottom:24px;
+
+.featured-content {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  padding: 35px;
+  max-width: 720px;
 }
-.article img {
-  width:96px;
-  height:96px;
-  object-fit:cover;
-  filter:grayscale(100%) brightness(75%) contrast(125%);
+
+.category {
+  display: inline-block;
+  background: var(--blue);
+  color: white;
+  padding: 6px 11px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
 }
-.tag {
-  color:#007BFF;
-  font-size:12px;
-  font-weight:bold;
-  display:block;
-  margin-bottom:4px;
+
+.featured-content h2 {
+  font-size: clamp(24px, 4vw, 36px);
+  line-height: 1.25;
+  margin: 0 0 12px;
 }
+
+.featured-content p {
+  color: #d1dceb;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  font-size: 29px;
+  margin: 0 0 10px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  padding-bottom: 70px;
+}
+
+.article-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  overflow: hidden;
+  transition: 0.25s;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(8,124,240,0.6);
+}
+
+.article-card img {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.article-content {
+  padding: 22px;
+}
+
+.article-category {
+  color: #56a9ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 11px;
+  display: block;
+}
+
+.article-content h3 {
+  font-size: 19px;
+  line-height: 1.4;
+  margin: 0 0 12px;
+}
+
+.article-content p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.insight-note {
+  background: #0d2039;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 65px;
+}
+
+.insight-note h3 {
+  margin: 0 0 10px;
+  font-size: 19px;
+}
+
+.insight-note p {
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 0;
+  font-size: 14px;
+}
+
+.cta {
+  max-width: 1110px;
+  margin: 0 auto 65px;
+  padding: 42px 25px;
+  background: linear-gradient(120deg, #0d2d50, #0b1c31);
+  border: 1px solid rgba(8,124,240,0.35);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.cta h2 {
+  margin: 0 0 12px;
+  font-size: 27px;
+}
+
+.cta p {
+  color: var(--muted);
+  margin: 0 0 24px;
+  line-height: 1.7;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--blue);
+  color: white;
+  padding: 14px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
 footer {
-  background:#0c0f10;
-  border-top:1px solid #4c4546;
-  padding:32px 16px;
-  text-align:center;
-  font-size:12px;
-  color:#988e90;
+  background: #050e1a;
+  border-top: 1px solid var(--border);
+  padding: 32px 20px;
+  text-align: center;
+  color: #8292a8;
+  font-size: 13px;
 }
-@media(max-width:768px){
-  nav {display:none;}
-  .menu-btn {display:block;}
+
+footer a {
+  color: #9eafc4;
+  text-decoration: none;
+  margin: 0 9px;
+}
+
+@media(max-width: 1000px) {
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 10px;
+  }
+}
+
+@media(max-width: 850px) {
+  nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .articles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 600px) {
+  .articles {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 48px;
+  }
+
+  .featured {
+    height: 390px;
+  }
+
+  .featured-content {
+    padding: 22px;
+  }
+
+  .article-card img {
+    height: 220px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="nav-wrap">
-  <div class="logo">VETA</div>
-  
-  <nav>
+  <div class="nav-wrap">
+
+    <a href="index.html" class="logo">
+      <span class="logo-mark">M</span>
+      <span>
+        MARWA TECH
+        <small>COMPANY LTD</small>
+      </span>
+    </a>
+
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="products.html">PRODUCTS</a>
+      <a href="gallery.html">GALLERY</a>
+      <a href="news.html" class="active">NEWS</a>
+      <a href="career.html">CAREER</a>
+      <a href="support.html">SUPPORT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">HOME</a>
     <a href="about.html">ABOUT</a>
     <a href="services.html">SERVICES</a>
+    <a href="products.html">PRODUCTS</a>
     <a href="gallery.html">GALLERY</a>
     <a href="news.html" class="active">NEWS</a>
     <a href="career.html">CAREER</a>
     <a href="support.html">SUPPORT</a>
     <a href="contact.html">CONTACT</a>
-  </nav>
-  
-  <button class="menu-btn" id="menuBtn">☰</button>
-</div>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">HOME</a>
-  <a href="about.html">ABOUT</a>
-  <a href="services.html">SERVICES</a>
-  <a href="gallery.html">GALLERY</a>
-  <a href="news.html" class="active">NEWS</a>
-  <a href="career.html">CAREER</a>
-  <a href="support.html">SUPPORT</a>
-  <a href="contact.html">CONTACT</a>
-</div>
+  </div>
 </header>
 
 <main>
 
-<section class="hero">
-<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKVuDAbbbJfKLt4xlNljM_KLFTH_fI_ixtmBkzTV7O1X9xdMwlLj5L1LOwtI0hChBVTnW2uELYY4FzhMC8Hkeo-h5Rubh0DOAkmMEet17K6KB9Wx6XsRZ_1-nn2bT3l7vBGg9Ut6CdA8om4mp3Wc27G8x8uQ-yiXRkj7kKANql8X9y-yJqThGZdHGmaxHF-INlxRbKahU5yn9qb7BY7AnovdHqmTdaev820l55OT8mh9r6dnSAwvJ8fURWm0qmw60LUdvFvNxnA90" alt="Global Expansion">
-<div class="hero-overlay">
-<span class="badge">CORPORATE</span>
-<h1>VETA Announces Global Expansion</h1>
-<p>2 hours ago • 4 min read</p>
-</div>
-</section>
+  <div class="container">
 
-<section>
-<div class="article">
-<div style="flex:1">
-<span class="tag">FINANCE</span>
-<h3>Q3 Financial Results Outperform Expectations</h3>
-<p>5 mins ago</p>
-</div>
-<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLiLAZPV9JgUuODyceESJ5c6NAYAWXJVLO_VrcKN1S8eP_kiQlTqREephqsX_ZzDSlUQ8R6UlQMfEKg4sPYS3CJ7HKJHhYoPs4Df4ai8LJGCS3dOgGuUgQqRBYe6dS_qCBMo5zey41s6ELKIGDTrrpEJP7Om8Q3JUHUeBUF24lY25eW9zdWzCKjK6OaTY7iX0IEb0YSdlktbJLArol9LNf2Sc3eIjLvpr8gej-ELHmZ5h_CSKz_MWJrbDt5bqyhef9i-4FfFuzMUg" alt="Financial Chart">
-</div>
+    <section class="hero">
+      <span class="eyebrow">MARWA TECH UPDATES</span>
+      <h1>Technology News & Insights</h1>
+      <p>
+        Practical technology ideas, digital trends and information
+        to help Kenyan businesses and organisations make better
+        decisions about technology.
+      </p>
+    </section>
 
-<div class="article">
-<div style="flex:1">
-<span class="tag">TECH</span>
-<h3>New Security Protocols Deployed Across VETA Ecosystem</h3>
-<p>1 hour ago</p>
-</div>
-<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuATZBAZQD7p1uPSGk4biUXZRJ4oRA7w_A4fzjM-BSHS0Q9Wk5tx4R3OQpTiJHVbDHYXME577lBY0p9YxKu5IfwNMIVKx2Q4LLbS5Rs8A-hobPCcknLe_bDvwxzgUg7AiqJwH2C6AgnRfOO-035M_376_Ss_5cbZ3kpsWSd3SUz3HpbATqE-TKdPlx4IEUq2P2J-KMr5aV8QSVRuxtLV_LiQ8lUlGM1s467tm4UgSpJtxoebRBUVoanGdyOqILOXG2fwn59ERosyOXU" alt="Security Tech">
-</div>
+    <!-- FEATURED ARTICLE -->
 
-<div class="article">
-<div style="flex:1">
-<span class="tag">INVESTORS</span>
-<h3>VETA Insights: The Future of Sovereign Digital Assets</h3>
-<p>3 hours ago</p>
-</div>
-<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVGLY2L8kmrp-9e_k40W42ErXRBQ_512KkLNZj9SwB9bxLF2QyM1-tHE5pSFntohXMDl_hiH4YSFkpvUgfo6GAEoUECdgEejiHJOHqc50pr_KUNh5dD00ughdMeQJIx2oq7Q8asbNCPSBIiY8FekIDkEe9HwSBX7__DWsZ49UWUGrGgWXcSwNwdkLF5KyG10j3vyT7ykpdmhn2PNVfPltJ6MOGxh_F3V6Z-VbQBBYwBt3p-PkRC9YuT3lWE8s3i8Aux0Pny83HHPM" alt="Digital Assets">
-</div>
-</section>
+    <section class="featured">
+
+      <img
+        src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=85"
+        alt="Close-up photograph of electronic circuit board components"
+        loading="eager"
+      >
+
+      <div class="featured-content">
+        <span class="category">TECHNOLOGY INSIGHT</span>
+
+        <h2>Why Technology Matters for Growing Businesses</h2>
+
+        <p>
+          From managing everyday operations to serving customers online,
+          the right technology can help businesses work more efficiently
+          and prepare for future growth.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- LATEST INSIGHTS -->
+
+    <section>
+
+      <div class="section-heading">
+        <span class="eyebrow">EXPLORE OUR INSIGHTS</span>
+        <h2>Technology Topics Worth Knowing</h2>
+        <p>
+          Useful information for business owners, professionals
+          and organisations.
+        </p>
+      </div>
+
+      <div class="articles">
+
+        <article class="article-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=85"
+            alt="Cybersecurity concept with digital security graphics"
+            loading="lazy"
+          >
+
+          <div class="article-content">
+            <span class="article-category">Cybersecurity</span>
+
+            <h3>Simple Ways to Improve Your Business Cybersecurity</h3>
+
+            <p>
+              Strong passwords, software updates, backups and staff
+              awareness are practical starting points for protecting
+              business information.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="article-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=85"
+            alt="Developer working on a website using a laptop"
+            loading="lazy"
+          >
+
+          <div class="article-content">
+            <span class="article-category">Web Development</span>
+
+            <h3>What Makes a Good Business Website?</h3>
+
+            <p>
+              A useful business website should be easy to navigate,
+              mobile-friendly, fast to load and clear about the
+              products or services being offered.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="article-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=85"
+            alt="Team collaborating around computers in an office"
+            loading="lazy"
+          >
+
+          <div class="article-content">
+            <span class="article-category">Digital Transformation</span>
+
+            <h3>How Digital Tools Can Improve Daily Business Operations</h3>
+
+            <p>
+              Digital tools can help organisations manage records,
+              communicate with customers and organise routine
+              tasks more effectively.
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section class="insight-note">
+      <h3>Technology that makes sense for your organisation</h3>
+      <p>
+        Every business has different technology needs. Before choosing
+        a new system or service, consider your goals, available budget,
+        security requirements and the people who will use it.
+      </p>
+    </section>
+
+    <section class="cta">
+      <h2>Have a technology project in mind?</h2>
+      <p>
+        Talk to MARWA TECH about your website, software,
+        cybersecurity, cloud or networking requirements.
+      </p>
+      <a href="contact.html" class="btn">Talk to Our Team</a>
+    </section>
+
+  </div>
 
 </main>
 
 <footer>
-<div style="font-weight:bold;font-size:18px;color:#c6c6c6;margin-bottom:8px">VETA</div>
-<p>© 2026 VETA COMPANY LTD. All rights reserved.</p>
-<p style="margin-top:16px">
-<a href="privacy.html" style="color:#988e90;margin:0 8px;text-decoration:none">Privacy Policy</a>
-<a href="terms.html" style="color:#988e90;margin:0 8px;text-decoration:none">Terms</a>
-<a href="contact.html" style="color:#988e90;margin:0 8px;text-decoration:none">Contact</a>
-</p>
+  <div style="font-weight:800;font-size:18px;color:#ffffff;margin-bottom:8px">
+    MARWA TECH
+  </div>
+
+  <p>© 2026 MARWA TECH COMPANY LTD. All rights reserved.</p>
+
+  <p style="margin-top:16px">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms</a>
+    <a href="contact.html">Contact</a>
+  </p>
 </footer>
 
 <script>
