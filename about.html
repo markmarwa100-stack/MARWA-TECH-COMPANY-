@@ -1,308 +1,838 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | VETA COMPANY LTD</title>
-<meta name="description" content="Learn about VETA COMPANY LTD - engineering the future through precision, technical excellence, and uncompromising security standards.">
-<style>
-body {
-  margin:0;
-  padding:0;
-  background:#131313;
-  color:#e5e2e1;
-  font-family:Arial,sans-serif;
-}
-header {
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:100;
-  background:rgba(0,0,0,0.9);
-  border-bottom:1px solid #414754;
-  padding:12px 16px;
-}
-.nav-wrap {
-  max-width:1320px;
-  margin:0 auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.logo {
-  color:#adc7ff;
-  font-weight:bold;
-  font-size:20px;
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* Desktop nav */
-nav {
-  display:flex;
-}
-nav a {
-  color:#c1c6d7;
-  text-decoration:none;
-  margin:0 10px;
-  font-size:14px;
-  text-transform:uppercase;
-  letter-spacing:0.05em;
-}
-nav a.active {
-  color:#adc7ff;
-  font-weight:bold;
-}
-nav a:hover {
-  color:#adc7ff;
-}
+  <title>About Us | MARWA TECH COMPANY LTD</title>
 
-/* Hamburger button */
-.menu-btn {
-  display:none;
-  background:none;
-  border:none;
-  color:#e5e2e1;
-  font-size:32px;
-  cursor:pointer;
-}
+  <meta name="description" content="Discover MARWA TECH COMPANY LTD, our mission, vision, values and approach to technology solutions.">
 
-/* Mobile menu */
-.mobile-menu {
-  display:none;
-  flex-direction:column;
-  background:#000;
-  border-top:1px solid #414754;
-  padding:0 16px;
-}
-.mobile-menu a {
-  color:#fff;
-  text-decoration:none;
-  padding:18px 0;
-  font-size:18px;
-  font-weight:bold;
-  border-bottom:1px solid #1a1a1a;
-}
-.mobile-menu a.active {
-  color:#adc7ff;
-}
-.mobile-menu.show {
-  display:flex;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-main {
-  padding-top:80px;
-}
-.hero {
-  position:relative;
-  min-height:600px;
-  display:flex;
-  align-items:center;
-  padding:64px 16px;
-  overflow:hidden;
-}
-.hero-bg {
-  position:absolute;
-  inset:0;
-}
-.hero-bg img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:grayscale(100%) opacity(30%);
-}
-.hero-content {
-  position:relative;
-  z-index:10;
-  max-width:1320px;
-  margin:0 auto;
-}
-.badge {
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:6px 16px;
-  background:rgba(173,199,255,0.1);
-  border:1px solid rgba(173,199,255,0.3);
-  border-radius:999px;
-  color:#adc7ff;
-  font-size:14px;
-  font-weight:600;
-  margin-bottom:32px;
-}
-h1 {
-  font-size:40px;
-  font-weight:bold;
-  margin:0 0 24px 0;
-  color:#ffffff;
-}
-p {
-  color:#c1c6d7;
-  font-size:18px;
-  line-height:1.6;
-  margin:0 0 40px 0;
-}
-.btn {
-  display:inline-block;
-  background:#adc7ff;
-  color:#000;
-  padding:16px 32px;
-  font-weight:bold;
-  border-radius:8px;
-  text-decoration:none;
-}
-section {
-  padding:96px 16px;
-  max-width:1320px;
-  margin:0 auto;
-}
-.card {
-  background:#121212;
-  border:1px solid #414754;
-  border-radius:16px;
-  padding:48px;
-  margin-bottom:32px;
-}
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:32px;
-}
-footer {
-  background:#000;
-  border-top:1px solid rgba(65,71,84,0.2);
-  padding:32px 16px;
-  text-align:center;
-  font-size:12px;
-  color:#c1c6d7;
-}
+  <style>
+    :root {
+      --primary: #087cf0;
+      --dark: #071426;
+      --dark2: #0c2544;
+      --text: #172337;
+      --muted: #64748b;
+      --light: #f4f7fb;
+      --white: #ffffff;
+    }
 
-@media(max-width:768px){
-  nav {display:none;}
-  .menu-btn {display:block;}
-  h1 {font-size:32px;}
-}
-</style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: white;
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    /* HEADER */
+    header {
+      background: rgba(7,20,38,.98);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .navbar {
+      min-height: 82px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: white;
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .logo-icon {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      background: var(--primary);
+      border-radius: 12px;
+      font-size: 22px;
+    }
+
+    .logo small {
+      display: block;
+      color: #a9bdd6;
+      font-size: 9px;
+      letter-spacing: 2px;
+      margin-top: 5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #d7e1ef;
+      font-size: 12px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #58b1ff;
+    }
+
+    .nav-links .nav-cta {
+      background: var(--primary);
+      color: white;
+      padding: 11px 17px;
+      border-radius: 7px;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      color: white;
+      border: 0;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(8,124,240,.22), transparent 35%),
+        linear-gradient(115deg, #071426, #0c2544);
+      color: white;
+      padding: 90px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: #58b1ff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5vw, 55px);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span { color: #48a7ff; }
+
+    .hero p {
+      color: #c3d0df;
+      font-size: 15px;
+      margin-bottom: 28px;
+      max-width: 550px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 14px 23px;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background: #0065cb;
+      transform: translateY(-2px);
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.15);
+    }
+
+    /* GENERAL SECTIONS */
+    section { padding: 85px 0; }
+
+    .section-heading {
+      max-width: 700px;
+      text-align: center;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading h2 {
+      color: var(--dark);
+      font-size: clamp(28px, 4vw, 39px);
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* COMPANY OVERVIEW */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .overview-image img {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+
+    .overview-content h2 {
+      font-size: 35px;
+      line-height: 1.2;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+
+    .overview-content p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 17px;
+    }
+
+    /* MISSION AND VISION */
+    .mission-section { background: var(--light); }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .info-card {
+      background: white;
+      padding: 35px;
+      border: 1px solid #e5ebf3;
+      border-radius: 13px;
+    }
+
+    .info-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      background: #eaf4ff;
+      border-radius: 12px;
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
+
+    .info-card h3 {
+      color: var(--dark);
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .info-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* VALUES */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .value-card {
+      padding: 27px 22px;
+      border: 1px solid #e5ebf3;
+      border-radius: 12px;
+      transition: .3s;
+    }
+
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(18,47,82,.08);
+    }
+
+    .value-card span { font-size: 27px; }
+
+    .value-card h3 {
+      font-size: 17px;
+      color: var(--dark);
+      margin: 15px 0 10px;
+    }
+
+    .value-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* APPROACH */
+    .approach-section {
+      background: var(--dark);
+      color: white;
+    }
+
+    .approach-section .section-heading h2 { color: white; }
+    .approach-section .section-heading p { color: #a9bad0; }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .approach-card {
+      padding: 25px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 12px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .approach-card .number {
+      color: #58b1ff;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .approach-card h3 {
+      margin: 12px 0;
+      font-size: 17px;
+    }
+
+    .approach-card p {
+      color: #adbed2;
+      font-size: 13px;
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(110deg, #087cf0, #0754b0);
+      color: white;
+      text-align: center;
+      padding: 65px 20px;
+      border-radius: 16px;
+      margin: 0 auto;
+    }
+
+    .cta h2 {
+      font-size: clamp(27px, 4vw, 38px);
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: #e2efff;
+      margin-bottom: 25px;
+    }
+
+    .cta .btn {
+      background: white;
+      color: #0754b0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #050e1b;
+      color: white;
+      padding: 55px 0 20px;
+      margin-top: 85px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 30px;
+      padding-bottom: 35px;
+    }
+
+    .footer-about p {
+      color: #9eafc4;
+      font-size: 13px;
+      margin-top: 15px;
+    }
+
+    .footer-column h3 {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #9eafc4;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .footer-column a:hover { color: #58b1ff; }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 20px;
+      text-align: center;
+      color: #8496ac;
+      font-size: 12px;
+    }
+
+    @media(max-width: 1050px) {
+      .nav-links { gap: 12px; }
+      .nav-links a { font-size: 11px; }
+      .values-grid, .approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width: 800px) {
+      .menu-toggle { display: block; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        padding: 20px 5%;
+        background: #071426;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 17px;
+      }
+
+      .nav-links.active { display: flex; }
+
+      .navbar { min-height: 72px; }
+
+      .hero-grid, .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-image { height: 350px; }
+
+      .mission-grid { grid-template-columns: 1fr; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media(max-width: 520px) {
+      section { padding: 65px 0; }
+
+      .values-grid, .approach-grid, .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero { padding: 65px 0; }
+
+      .hero h1 { letter-spacing: -1px; }
+
+      .overview-content h2 { font-size: 29px; }
+
+      .hero-image, .overview-image img { height: 290px; }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-<div class="nav-wrap">
-  <div class="logo">⚙️ VETA</div>
-  
-  <nav>
-    <a href="index.html">HOME</a>
-    <a href="about.html" class="active">ABOUT</a>
-    <a href="services.html">SERVICES</a>
-    <a href="gallery.html">GALLERY</a>
-    <a href="news.html">NEWS</a>
-    <a href="career.html">CAREER</a>
-    <a href="support.html">SUPPORT</a>
-    <a href="contact.html">CONTACT</a>
-  </nav>
-  
-  <button class="menu-btn" id="menuBtn">☰</button>
-</div>
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">HOME</a>
-  <a href="about.html" class="active">ABOUT</a>
-  <a href="services.html">SERVICES</a>
-  <a href="gallery.html">GALLERY</a>
-  <a href="news.html">NEWS</a>
-  <a href="career.html">CAREER</a>
-  <a href="support.html">SUPPORT</a>
-  <a href="contact.html">CONTACT</a>
-</div>
-</header>
+      <a href="index.html" class="logo">
+        <div class="logo-icon">M</div>
+        <div>
+          MARWA TECH
+          <small>COMPANY LTD</small>
+        </div>
+      </a>
 
-<main>
-<section class="hero">
-<div class="hero-bg">
-<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGvZ5PN1u_YYhJJGpgX_6ePLH90PyzeAkEOp8oPfDkoCDMPWCFyNb-i-E--CTBBi23xKy_-kS06Ewa-hNt5--t3Kw_fnLDJ6HMEGO5F35fGAb6qW0LpgM6sGGgn-5PM7ZeoX5oicRNQf6AjBh2VMvOmFtloO000p2J4Mt3v6XNUej90Ci6wbzR3HDzxXnKGUpw1lW27aFmEY9K-Lu-wS4P0a3FQZsrQVZk_zl5tTcXCQ7VSHRAjAA62Q99PztSWlQDTJ0YoMEeyVdW" alt="Engineering environment">
-</div>
-<div class="hero-content">
-<div class="badge">✓ Secure Infrastructure Certified</div>
-<h1>About VETA COMPANY LTD</h1>
-<p>Engineering the future through precision, technical excellence, and uncompromising security standards. Our mission is to provide robust infrastructure solutions that empower global innovation.</p>
-<a href="services.html" class="btn">View Our Capabilities</a>
-</div>
-</section>
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
 
-<section>
-<h2 style="font-size:32px;font-weight:bold;margin:0 0 48px 0;color:#adc7ff">Our Origins</h2>
-<div class="card">
-<p style="font-size:18px;margin:0 0 24px 0">Founded in the heart of the technological revolution, VETA COMPANY LTD emerged from a vision to bridge the gap between complex engineering challenges and secure, scalable solutions. What started as a focused consultancy has evolved into a full-scale engineering powerhouse.</p>
-<p style="font-size:18px;margin:0">Our journey is defined by a relentless pursuit of technical perfection. We don't just build systems; we engineer trust. Every line of code and every hardware component is scrutinized through our rigorous security-first framework.</p>
-</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="career.html">Careers</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
 
-<div class="grid">
-<div class="card" style="border-top:4px solid #adc7ff">
-<h3 style="font-size:24px;margin:0 0 16px 0">Mission</h3>
-<p style="font-size:16px;margin:0">To deliver world-class engineering solutions that set the benchmark for security and reliability.</p>
-</div>
-<div class="card">
-<h3 style="font-size:24px;margin:0 0 16px 0">Vision</h3>
-<p style="font-size:16px;margin:0">To be the global anchor for secure infrastructure in an increasingly digital world.</p>
-</div>
-</div>
-</section>
+    </div>
+  </header>
 
-<section style="background:#000">
-<h2 style="font-size:32px;font-weight:bold;text-align:center;margin:0 0 64px 0">The VETA Standard</h2>
-<div class="grid">
-<div class="card">
-<h4 style="font-size:20px;margin:0 0 16px 0">Innovation</h4>
-<p style="font-size:16px;margin:0">Cutting-edge methodologies applied to traditional engineering bottlenecks.</p>
-</div>
-<div class="card">
-<h4 style="font-size:20px;margin:0 0 16px 0">Reliability</h4>
-<p style="font-size:16px;margin:0">Proven track record of 99.9% uptime for mission-critical deployments.</p>
-</div>
-<div class="card">
-<h4 style="font-size:20px;margin:0 0 16px 0">Security</h4>
-<p style="font-size:16px;margin:0">Multi-layered security protocols integrated into the very core of our designs.</p>
-</div>
-<div class="card">
-<h4 style="font-size:20px;margin:0 0 16px 0">Professionalism</h4>
-<p style="font-size:16px;margin:0">Unparalleled technical support and dedicated project management.</p>
-</div>
-</div>
-</section>
+  <main>
 
-<section style="background:#adc7ff;color:#000;text-align:center;border-radius:24px;margin:64px 16px;padding:64px">
-<h2 style="font-size:32px;font-weight:bold;margin:0 0 24px 0">Ready to Secure Your Future?</h2>
-<p style="font-size:18px;color:#000;margin:0 0 32px 0;max-width:700px;margin-left:auto;margin-right:auto">Join the ranks of industry leaders who trust VETA COMPANY LTD for their most critical engineering challenges.</p>
-<a href="contact.html" style="background:#000;color:#adc7ff;padding:16px 32px;font-weight:bold;border-radius:12px;text-decoration:none;display:inline-block">Contact Expert Team</a>
-</section>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
 
-</main>
+        <div>
+          <div class="eyebrow">Get to Know Us</div>
 
-<footer>
-⚙️ VETA © 2026 VETA COMPANY LTD. All rights reserved.
-<div style="margin-top:12px">
-<a href="privacy.html" style="color:#c1c6d7;margin:0 8px;text-decoration:none">Privacy</a>
-<a href="terms.html" style="color:#c1c6d7;margin:0 8px;text-decoration:none">Terms</a>
-<a href="contact.html" style="color:#c1c6d7;margin:0 8px;text-decoration:none">Contact</a>
-</div>
-</footer>
+          <h1>
+            About <span>MARWA TECH</span> COMPANY LTD
+          </h1>
 
-<script>
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
+          <p>
+            We believe technology should solve real problems.
+            Our focus is on exploring practical digital solutions,
+            supporting businesses and helping people make better
+            use of technology.
+          </p>
 
-menuBtn.addEventListener('click', () => {
-  mobileMenu.classList.toggle('show');
-});
+          <a href="services.html" class="btn">
+            Explore Our Services →
+          </a>
+        </div>
 
-document.querySelectorAll('.mobile-menu a').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('show');
-  });
-});
-</script>
+        <div>
+          <img
+            class="hero-image"
+            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85"
+            alt="Professionals collaborating in a modern workplace"
+          >
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COMPANY OVERVIEW -->
+    <section>
+      <div class="container overview-grid">
+
+        <div class="overview-image">
+          <img
+            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85"
+            alt="Modern professional office workspace"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="overview-content">
+          <div class="eyebrow">Our Company</div>
+
+          <h2>Making Technology Work for People and Businesses</h2>
+
+          <p>
+            MARWA TECH COMPANY LTD is a technology-focused company
+            with an interest in digital development, IT services
+            and practical technology solutions.
+          </p>
+
+          <p>
+            We aim to understand the needs of our clients and
+            identify suitable approaches to their technology
+            challenges. We value clear communication, responsible
+            work and solutions that serve a real purpose.
+          </p>
+
+          <p>
+            Our goal is to build professional relationships and
+            contribute to a more connected and digitally capable
+            business environment.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MISSION AND VISION -->
+    <section class="mission-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Our Direction</div>
+          <h2>What Guides Our Company</h2>
+          <p>
+            Our mission and vision describe the direction we want
+            to take and the value we aim to create.
+          </p>
+        </div>
+
+        <div class="mission-grid">
+
+          <div class="info-card">
+            <div class="info-icon">🎯</div>
+            <h3>Our Mission</h3>
+            <p>
+              To provide practical and useful technology solutions
+              that help businesses and individuals address challenges,
+              improve their operations and make informed use of digital tools.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">🚀</div>
+            <h3>Our Vision</h3>
+            <p>
+              To grow into a trusted technology company recognised
+              for responsible service, useful innovation and meaningful
+              contributions to the digital world.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE VALUES -->
+    <section>
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">What We Believe In</div>
+          <h2>Our Core Values</h2>
+          <p>
+            The principles that guide how we approach our work,
+            our clients and our responsibilities.
+          </p>
+        </div>
+
+        <div class="values-grid">
+
+          <div class="value-card">
+            <span>💡</span>
+            <h3>Innovation</h3>
+            <p>
+              Staying curious and exploring better ways to
+              solve technology challenges.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <span>🤝</span>
+            <h3>Integrity</h3>
+            <p>
+              Being honest, responsible and professional
+              in our work and communication.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <span>⭐</span>
+            <h3>Quality</h3>
+            <p>
+              Paying attention to detail and aiming to deliver
+              work that meets agreed requirements.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <span>👥</span>
+            <h3>Customer Focus</h3>
+            <p>
+              Listening to clients and understanding their
+              needs before recommending solutions.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR APPROACH -->
+    <section class="approach-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Our Approach</div>
+          <h2>How We Approach Every Project</h2>
+          <p>
+            We believe a good solution begins with understanding
+            the problem and ends with a clear result.
+          </p>
+        </div>
+
+        <div class="approach-grid">
+
+          <div class="approach-card">
+            <div class="number">01 / UNDERSTAND</div>
+            <h3>Listen and Learn</h3>
+            <p>
+              Understand the client's goals, requirements
+              and current challenges.
+            </p>
+          </div>
+
+          <div class="approach-card">
+            <div class="number">02 / PLAN</div>
+            <h3>Build a Plan</h3>
+            <p>
+              Identify suitable options and agree on
+              the project scope and priorities.
+            </p>
+          </div>
+
+          <div class="approach-card">
+            <div class="number">03 / DELIVER</div>
+            <h3>Work on Solutions</h3>
+            <p>
+              Develop or implement the agreed solution
+              with attention to quality.
+            </p>
+          </div>
+
+          <div class="approach-card">
+            <div class="number">04 / IMPROVE</div>
+            <h3>Review and Support</h3>
+            <p>
+              Review the outcome and discuss any
+              ongoing support or improvements.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section>
+      <div class="container">
+        <div class="cta">
+
+          <h2>Let's Build Something Meaningful</h2>
+
+          <p>
+            Have an idea, a project or a technology challenge?
+            Get in touch and let's start a conversation.
+          </p>
+
+          <a href="contact.html" class="btn">
+            Contact MARWA TECH →
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">M</div>
+            <div>
+              MARWA TECH
+              <small>COMPANY LTD</small>
+            </div>
+          </a>
+
+          <p>
+            Exploring practical technology and digital solutions
+            for businesses and individuals.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <a href="products.html">Products</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="news.html">News</a>
+          <a href="career.html">Careers</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Customer Help</h3>
+          <a href="support.html">Support Centre</a>
+          <a href="contact.html">Make an Enquiry</a>
+          <a href="contact.html">Request a Service</a>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © <span id="year"></span> MARWA TECH COMPANY LTD.
+        All Rights Reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+
+      const isOpen = navLinks.classList.contains("active");
+
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 
 </body>
 </html>
