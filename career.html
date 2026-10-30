@@ -4,9 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Careers | MARWA TECH COMPANY LTD</title>
-<meta name="description" content="Explore career opportunities and professional growth at MARWA TECH COMPANY LTD.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +21,37 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
   background: #071426;
   color: #e5eaf2;
   font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* BACKGROUND DESIGN */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(ellipse at 10% 10%, rgba(0,124,240,.18), transparent 35%),
+    radial-gradient(ellipse at 90% 35%, rgba(0,124,240,.12), transparent 35%),
+    radial-gradient(ellipse at 50% 90%, rgba(0,80,180,.12), transparent 40%),
+    #071426;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .22;
+  background-image:
+    linear-gradient(rgba(90,140,190,.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90,140,190,.12) 1px, transparent 1px);
+  background-size: 45px 45px;
 }
 
 header {
@@ -34,7 +60,8 @@ header {
   left: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(7,20,38,0.97);
+  background: rgba(7,20,38,.96);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid #263750;
 }
 
@@ -52,8 +79,8 @@ header {
   align-items: center;
   gap: 10px;
   color: #fff;
-  font-size: 19px;
   font-weight: 800;
+  font-size: 19px;
   text-decoration: none;
 }
 
@@ -64,9 +91,9 @@ header {
   align-items: center;
   justify-content: center;
   background: #087cf0;
+  color: white;
   border-radius: 9px;
   font-size: 24px;
-  font-weight: 800;
 }
 
 .logo small {
@@ -80,7 +107,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  gap: 17px;
+  gap: 18px;
 }
 
 nav a {
@@ -113,11 +140,12 @@ nav a.active {
 }
 
 .mobile-menu a {
-  color: #e5eaf2;
+  color: #fff;
   text-decoration: none;
-  padding: 14px 0;
+  padding: 15px 0;
+  font-size: 15px;
+  font-weight: 700;
   border-bottom: 1px solid #263750;
-  font-weight: 600;
 }
 
 .mobile-menu a.active {
@@ -133,22 +161,23 @@ main {
 }
 
 section {
+  padding: 85px 20px;
   max-width: 1320px;
   margin: 0 auto;
-  padding: 85px 20px;
 }
 
 .hero {
-  padding: 105px 20px;
+  max-width: none;
+  padding: 115px 20px;
   border-bottom: 1px solid #263750;
   background:
-    radial-gradient(circle at 2px 2px, #19304c 1px, transparent 0);
+    radial-gradient(circle at 2px 2px, rgba(80,150,220,.25) 1px, transparent 0);
   background-size: 38px 38px;
 }
 
 .hero-content {
   max-width: 1320px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .eyebrow {
@@ -160,22 +189,26 @@ section {
 }
 
 h1 {
-  font-size: clamp(36px, 5vw, 54px);
-  color: #fff;
+  font-size: clamp(36px, 5vw, 58px);
   line-height: 1.15;
+  font-weight: 800;
+  color: #fff;
   margin: 18px 0;
+  max-width: 800px;
 }
 
 h2 {
+  font-size: 32px;
+  font-weight: 800;
   color: #fff;
-  font-size: 30px;
-  margin: 0 0 18px;
+  margin: 0 0 30px;
 }
 
 h3 {
-  color: #fff;
   font-size: 20px;
-  margin: 0 0 12px;
+  font-weight: 700;
+  color: #55a8ff;
+  margin: 0 0 14px;
 }
 
 p {
@@ -185,110 +218,65 @@ p {
 }
 
 .hero p {
-  max-width: 700px;
-  font-size: 17px;
+  max-width: 720px;
+  font-size: 18px;
 }
 
 .btn {
   display: inline-block;
   background: #087cf0;
-  color: white;
-  padding: 15px 27px;
+  color: #fff;
+  padding: 15px 30px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 700;
   transition: .3s;
+  margin-top: 20px;
 }
 
 .btn:hover {
   background: #0065ca;
-  transform: translateY(-2px);
-}
-
-.section-intro {
-  max-width: 720px;
-  margin-bottom: 35px;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(8,124,240,.25);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
 }
 
 .card {
-  background: #0d2038;
+  background: rgba(13,32,56,.88);
   border: 1px solid #263750;
   border-radius: 14px;
-  padding: 28px;
+  padding: 30px;
   transition: .3s;
+  backdrop-filter: blur(8px);
 }
 
 .card:hover {
+  transform: translateY(-6px);
   border-color: #087cf0;
-  transform: translateY(-4px);
-}
-
-.card-icon {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(8,124,240,.14);
-  border-radius: 10px;
-  color: #58a8ff;
-  font-size: 23px;
-  margin-bottom: 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.2);
 }
 
 .card p {
   margin-bottom: 0;
-  font-size: 15px;
-}
-
-.values-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-
-.value-item {
-  display: flex;
-  gap: 15px;
-  align-items: flex-start;
-  background: #0d2038;
-  border: 1px solid #263750;
-  border-radius: 12px;
-  padding: 23px;
-}
-
-.value-icon {
-  color: #087cf0;
-  font-size: 23px;
-}
-
-.value-item h3 {
-  font-size: 17px;
-  margin-bottom: 6px;
-}
-
-.value-item p {
-  font-size: 14px;
-  margin: 0;
-}
-
-.roles {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
 }
 
 .role-card {
-  background: #0d2038;
+  margin-bottom: 18px;
+  background: rgba(13,32,56,.9);
   border: 1px solid #263750;
   border-radius: 12px;
-  padding: 25px;
+  padding: 25px 30px;
+  transition: .3s;
+}
+
+.role-card:hover {
+  border-color: #087cf0;
+  transform: translateX(5px);
 }
 
 .role-card h3 {
@@ -297,33 +285,27 @@ p {
 
 .role-card p {
   margin: 0;
-  font-size: 14px;
-}
-
-.role-status {
-  display: inline-block;
-  color: #aab9cc;
-  background: #142b45;
-  border-radius: 5px;
-  padding: 6px 10px;
-  font-size: 11px;
-  font-weight: 700;
-  margin-top: 14px;
 }
 
 .cta {
   max-width: 1280px;
-  margin: 30px auto 85px;
+  margin: 40px auto 85px;
   padding: 65px 25px;
   text-align: center;
-  background: linear-gradient(120deg, #0d2038, #102e50);
-  border: 1px solid #263750;
+  border: 1px solid #1764a5;
   border-radius: 16px;
+  background:
+    radial-gradient(ellipse at top, rgba(8,124,240,.2), transparent 65%),
+    #0d2038;
+}
+
+.cta h2 {
+  margin-bottom: 15px;
 }
 
 .cta p {
   max-width: 650px;
-  margin: 0 auto 25px;
+  margin: auto;
 }
 
 footer {
@@ -355,32 +337,25 @@ footer a:hover {
   }
 }
 
-@media(max-width: 850px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .values-list {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media(max-width: 600px) {
-  section {
-    padding: 60px 16px;
-  }
-
   .hero {
-    padding: 75px 20px;
+    padding: 85px 20px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
+  section {
+    padding: 60px 18px;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+
+  .card {
+    padding: 24px;
   }
 
   .cta {
-    margin: 10px 16px 60px;
-    padding: 45px 20px;
+    margin: 20px 15px 60px;
   }
 }
 </style>
@@ -389,35 +364,17 @@ footer a:hover {
 <body>
 
 <header>
-  <div class="nav-wrap">
+<div class="nav-wrap">
 
-    <a href="index.html" class="logo">
-      <span class="logo-icon">M</span>
-      <span>
-        MARWA TECH
-        <small>COMPANY LTD</small>
-      </span>
-    </a>
+  <a href="index.html" class="logo">
+    <span class="logo-icon">M</span>
+    <span>
+      MARWA TECH
+      <small>COMPANY LTD</small>
+    </span>
+  </a>
 
-    <nav>
-      <a href="index.html">HOME</a>
-      <a href="about.html">ABOUT</a>
-      <a href="services.html">SERVICES</a>
-      <a href="products.html">PRODUCTS</a>
-      <a href="gallery.html">GALLERY</a>
-      <a href="news.html">NEWS</a>
-      <a href="career.html" class="active">CAREER</a>
-      <a href="support.html">SUPPORT</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
-
-    <button class="menu-btn" id="menuBtn"
-      aria-label="Open navigation menu"
-      aria-expanded="false">☰</button>
-
-  </div>
-
-  <div class="mobile-menu" id="mobileMenu">
+  <nav>
     <a href="index.html">HOME</a>
     <a href="about.html">ABOUT</a>
     <a href="services.html">SERVICES</a>
@@ -427,193 +384,152 @@ footer a:hover {
     <a href="career.html" class="active">CAREER</a>
     <a href="support.html">SUPPORT</a>
     <a href="contact.html">CONTACT</a>
-  </div>
+  </nav>
+
+  <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">HOME</a>
+  <a href="about.html">ABOUT</a>
+  <a href="services.html">SERVICES</a>
+  <a href="products.html">PRODUCTS</a>
+  <a href="gallery.html">GALLERY</a>
+  <a href="news.html">NEWS</a>
+  <a href="career.html" class="active">CAREER</a>
+  <a href="support.html">SUPPORT</a>
+  <a href="contact.html">CONTACT</a>
+</div>
 </header>
 
 <main>
 
-  <div class="hero">
-    <div class="hero-content">
-      <div class="eyebrow">Careers at MARWA TECH</div>
-
-      <h1>Build Your Future With Technology.</h1>
-
-      <p>
-        At MARWA TECH COMPANY LTD, we believe that talented people,
-        creative thinking and collaboration help build better
-        technology solutions. Discover opportunities to grow,
-        contribute and make an impact.
-      </p>
-
-      <a href="#opportunities" class="btn" style="margin-top:20px">
-        Explore Opportunities →
-      </a>
-    </div>
-  </div>
-
-  <section>
-    <div class="section-intro">
-      <div class="eyebrow">Our Workplace</div>
-      <h2>Grow With Us</h2>
-      <p>
-        We value people who are curious, responsible and passionate
-        about solving problems through technology. We aim to create
-        an environment where ideas are welcomed and professional
-        development is encouraged.
-      </p>
-    </div>
-
-    <div class="grid">
-
-      <div class="card">
-        <div class="card-icon">✦</div>
-        <h3>Innovation</h3>
-        <p>
-          We encourage fresh ideas, creative problem-solving and
-          continuous learning to help develop useful technology solutions.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">◎</div>
-        <h3>Professional Growth</h3>
-        <p>
-          We believe in developing skills, sharing knowledge and
-          supporting professional improvement.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">◇</div>
-        <h3>Teamwork</h3>
-        <p>
-          Collaboration, respect and communication help us work
-          together towards meaningful results.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section>
-    <div class="section-intro">
-      <div class="eyebrow">Our Values</div>
-      <h2>What We Value in Our Team</h2>
-      <p>
-        We look for people who are ready to contribute positively
-        and grow with a technology-focused company.
-      </p>
-    </div>
-
-    <div class="values-list">
-
-      <div class="value-item">
-        <div class="value-icon">✓</div>
-        <div>
-          <h3>Integrity</h3>
-          <p>
-            Acting honestly, responsibly and professionally in our work.
-          </p>
-        </div>
-      </div>
-
-      <div class="value-item">
-        <div class="value-icon">✓</div>
-        <div>
-          <h3>Accountability</h3>
-          <p>
-            Taking responsibility for our work, decisions and commitments.
-          </p>
-        </div>
-      </div>
-
-      <div class="value-item">
-        <div class="value-icon">✓</div>
-        <div>
-          <h3>Continuous Learning</h3>
-          <p>
-            Staying curious and improving our knowledge as technology evolves.
-          </p>
-        </div>
-      </div>
-
-      <div class="value-item">
-        <div class="value-icon">✓</div>
-        <div>
-          <h3>Customer Focus</h3>
-          <p>
-            Understanding business needs and working towards practical solutions.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="opportunities">
-    <div class="section-intro">
-      <div class="eyebrow">Join Our Team</div>
-      <h2>Career Opportunities</h2>
-      <p>
-        We welcome interest from people with skills and passion
-        across different areas of technology. Contact our team
-        to enquire about current or future opportunities.
-      </p>
-    </div>
-
-    <div class="roles">
-
-      <div class="role-card">
-        <h3>Web Development</h3>
-        <p>
-          Frontend development, backend development and website creation.
-        </p>
-        <span class="role-status">Career Area</span>
-      </div>
-
-      <div class="role-card">
-        <h3>Software Development</h3>
-        <p>
-          Software engineering, application development and technical problem-solving.
-        </p>
-        <span class="role-status">Career Area</span>
-      </div>
-
-      <div class="role-card">
-        <h3>Cybersecurity</h3>
-        <p>
-          Information security, security awareness and cybersecurity solutions.
-        </p>
-        <span class="role-status">Career Area</span>
-      </div>
-
-      <div class="role-card">
-        <h3>IT Support & Networking</h3>
-        <p>
-          Technical support, network infrastructure and IT operations.
-        </p>
-        <span class="role-status">Career Area</span>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="cta">
-    <div class="eyebrow">Take The Next Step</div>
-    <h2>Interested in Working With Us?</h2>
+<section class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">Careers at Marwa Tech</div>
+    <h1>Build the Future With MARWA TECH.</h1>
     <p>
-      Contact MARWA TECH COMPANY LTD to express your interest
-      in joining our team or to enquire about future career opportunities.
+      Be part of a team passionate about technology, innovation and
+      solving real-world business challenges. Grow your skills and
+      contribute to meaningful digital solutions.
     </p>
-
-    <a href="contact.html" class="btn">Contact Our Team →</a>
+    <a href="#roles" class="btn">Explore Career Opportunities →</a>
   </div>
+</section>
+
+<section>
+  <div class="eyebrow">Our Working Environment</div>
+  <h2>Our Culture</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Innovation First</h3>
+      <p>
+        We value creativity, fresh ideas and practical thinking.
+        We encourage our team to explore better ways of solving
+        technology challenges.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Ownership & Responsibility</h3>
+      <p>
+        We believe in accountability, teamwork and taking responsibility
+        for delivering quality work.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Continuous Growth</h3>
+      <p>
+        We support learning, collaboration and professional development
+        as technology and customer needs continue to evolve.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Why Work With Us</div>
+  <h2>Grow With Our Team</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Professional Development</h3>
+      <p>
+        Opportunities to develop your technical knowledge and
+        professional skills through practical experience.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Collaborative Environment</h3>
+      <p>
+        Work with people who value communication, shared ideas
+        and achieving goals together.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Meaningful Projects</h3>
+      <p>
+        Contribute to technology projects that help businesses
+        improve their operations and digital capabilities.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="roles">
+  <div class="eyebrow">Join Our Team</div>
+  <h2>Career Opportunities</h2>
+
+  <div class="role-card">
+    <h3>Web Developer</h3>
+    <p>Web Development • Software Team • Application development</p>
+  </div>
+
+  <div class="role-card">
+    <h3>Software Developer</h3>
+    <p>Software Development • Engineering • Business applications</p>
+  </div>
+
+  <div class="role-card">
+    <h3>IT Support Specialist</h3>
+    <p>IT Support • Technical Services • Troubleshooting</p>
+  </div>
+
+  <div class="role-card">
+    <h3>Network & Cybersecurity Specialist</h3>
+    <p>Network Infrastructure • Security • IT Operations</p>
+  </div>
+
+  <p style="font-size:13px">
+    These are example role categories, not confirmed vacancies.
+    Contact the company to ask about current opportunities.
+  </p>
+</section>
+
+<div class="cta">
+  <div class="eyebrow">Take The Next Step</div>
+  <h2>Don't See the Right Opportunity?</h2>
+  <p>
+    We welcome enquiries from talented people interested in
+    technology and innovation. Contact our team to ask about
+    potential career opportunities.
+  </p>
+  <a href="contact.html" class="btn">Contact Our Team →</a>
+</div>
 
 </main>
 
 <footer>
   <div>© 2026 MARWA TECH COMPANY LTD. All rights reserved.</div>
-
   <div style="margin-top:15px">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
