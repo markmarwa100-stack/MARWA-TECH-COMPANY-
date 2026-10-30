@@ -1,2 +1,2 @@
-# VETA-COMPANY-
-a software company located  at Tanzania Tanga
+# MARWA TECH COMPANY LTD
+a software company located  at Nairobi Kenya
