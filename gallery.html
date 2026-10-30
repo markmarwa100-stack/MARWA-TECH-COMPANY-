@@ -1,311 +1,645 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gallery | VETA COMPANY LTD</title>
-<meta name="description" content="Explore VETA COMPANY LTD's portfolio: cloud migration, cybersecurity, web development, and infrastructure projects.">
+
+<title>Our Work | MARWA TECH COMPANY LTD</title>
+<meta name="description" content="Explore technology solutions and project examples from MARWA TECH COMPANY LTD in Kenya.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin:0;
-  padding:0;
-  background:#131313;
-  color:#e5e2e1;
-  font-family:Arial,sans-serif;
+  margin: 0;
+  background: #071426;
+  color: #e5eaf2;
+  font-family: 'DM Sans', sans-serif;
 }
+
 header {
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:100;
-  background:rgba(0,0,0,0.9);
-  border-bottom:1px solid #414754;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(7,20,38,.97);
+  border-bottom: 1px solid #263750;
+  backdrop-filter: blur(12px);
 }
+
 .nav-wrap {
-  max-width:1320px;
-  margin:0 auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:12px 16px;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
 }
+
 .logo {
-  color:#adc7ff;
-  font-weight:bold;
-  font-size:20px;
-  display:flex;
-  align-items:center;
-  gap:8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 800;
+  text-decoration: none;
 }
 
-/* Desktop nav */
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #087cf0;
+  color: #fff;
+  border-radius: 9px;
+  font-size: 24px;
+}
+
+.logo small {
+  display: block;
+  color: #aab9cc;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 2px;
+}
+
 nav {
-  display:flex;
+  display: flex;
+  align-items: center;
+  gap: 17px;
 }
+
 nav a {
-  color:#c1c6d7;
-  text-decoration:none;
-  margin:0 10px;
-  font-size:14px;
-  text-transform:uppercase;
-  letter-spacing:0.05em;
+  color: #c1cbd9;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
 }
+
+nav a:hover,
 nav a.active {
-  color:#adc7ff;
-  font-weight:bold;
-}
-nav a:hover {
-  color:#adc7ff;
+  color: #087cf0;
 }
 
-/* Hamburger button */
 .menu-btn {
-  display:none;
-  background:none;
-  border:none;
-  color:#e5e2e1;
-  font-size:32px;
-  cursor:pointer;
-  padding:0;
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
 }
 
-/* Mobile menu */
 .mobile-menu {
-  display:none;
-  flex-direction:column;
-  background:#000;
-  border-top:1px solid #414754;
-  padding:0 16px;
-  width:100%;
+  display: none;
+  flex-direction: column;
+  background: #071426;
+  border-top: 1px solid #263750;
+  padding: 8px 20px;
 }
+
 .mobile-menu a {
-  color:#fff;
-  text-decoration:none;
-  padding:18px 0;
-  font-size:16px;
-  font-weight:bold;
-  border-bottom:1px solid #1a1a1a;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 0;
+  border-bottom: 1px solid #263750;
+  font-weight: 700;
 }
+
 .mobile-menu a.active {
-  color:#adc7ff;
+  color: #087cf0;
 }
+
 .mobile-menu.show {
-  display:flex;
+  display: flex;
 }
 
 main {
-  padding-top:80px;
+  padding-top: 70px;
 }
+
 .hero {
-  padding:96px 16px;
-  border-bottom:1px solid #414754;
-  background:radial-gradient(circle at 2px 2px,#1e1e1e 1px,transparent 0);
-  background-size:40px 40px;
-  position:relative;
+  padding: 100px 20px;
+  border-bottom: 1px solid #263750;
+  background:
+    radial-gradient(circle at 2px 2px, rgba(80,150,220,.2) 1px, transparent 0);
+  background-size: 38px 38px;
 }
+
 .hero-content {
-  max-width:1320px;
-  margin:0 auto;
-  position:relative;
-  z-index:2;
+  max-width: 1320px;
+  margin: auto;
 }
+
 .tag {
-  color:#adc7ff;
-  font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:0.2em;
-  font-weight:600;
-  margin-bottom:16px;
-  display:block;
+  color: #55a8ff;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
 }
+
 h1 {
-  font-size:40px;
-  font-weight:bold;
-  color:#ffffff;
-  margin:0 0 24px 0;
+  font-size: clamp(36px, 5vw, 54px);
+  line-height: 1.15;
+  color: white;
+  margin: 18px 0;
 }
-p {
-  color:#c1c6d7;
-  font-size:18px;
-  line-height:1.6;
+
+.hero p {
+  max-width: 700px;
+  color: #b7c5d6;
+  font-size: 17px;
+  line-height: 1.8;
 }
+
 section {
-  max-width:1320px;
-  margin:0 auto;
-  padding:80px 16px;
+  max-width: 1320px;
+  margin: auto;
+  padding: 75px 20px;
 }
+
+.section-heading {
+  margin-bottom: 32px;
+}
+
+.section-heading h2 {
+  color: white;
+  font-size: 30px;
+  margin: 12px 0;
+}
+
+.section-heading p {
+  color: #aebdd0;
+  max-width: 700px;
+  line-height: 1.8;
+}
+
+.intro-note {
+  background: #0d2038;
+  border-left: 4px solid #087cf0;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 35px;
+  color: #b7c5d6;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
 .grid {
-  display:grid;
-  grid-template-columns:repeat(12,1fr);
-  gap:24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
-.card {
-  background:#121212;
-  border:1px solid #414754;
-  border-radius:12px;
-  overflow:hidden;
-  transition:0.3s;
+
+.project-card {
+  background: #0d2038;
+  border: 1px solid #263750;
+  border-radius: 13px;
+  overflow: hidden;
+  transition: .3s;
 }
-.card:hover {
-  border-color:#adc7ff;
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #087cf0;
 }
-.card img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:0.7s;
+
+.project-card img {
+  width: 100%;
+  height: 260px;
+  display: block;
+  object-fit: cover;
 }
-.card:hover img {
-  transform:scale(1.05);
+
+.project-content {
+  padding: 26px;
 }
-.card-content {
-  padding:32px;
+
+.project-category {
+  color: #55a8ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-.badge {
-  display:inline-block;
-  padding:4px 12px;
-  background:rgba(173,199,255,0.1);
-  color:#adc7ff;
-  font-size:12px;
-  font-weight:600;
-  border-radius:4px;
-  margin-right:8px;
+
+.project-content h3 {
+  color: white;
+  font-size: 22px;
+  margin: 12px 0;
 }
+
+.project-content p {
+  color: #b7c5d6;
+  line-height: 1.7;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.project-label {
+  display: inline-block;
+  margin-top: 18px;
+  color: #9eb5d0;
+  background: #142c49;
+  padding: 7px 11px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.services-strip {
+  background: #0d2038;
+  border-top: 1px solid #263750;
+  border-bottom: 1px solid #263750;
+}
+
+.services-strip-inner {
+  max-width: 1320px;
+  margin: auto;
+  padding: 65px 20px;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.service-item {
+  border: 1px solid #30445e;
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.service-item h3 {
+  color: white;
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.service-item p {
+  color: #aebdd0;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
 .cta {
-  background:#000;
-  border-top:1px solid #414754;
-  border-bottom:1px solid #414754;
-  padding:96px 16px;
-  text-align:center;
+  max-width: 1280px;
+  margin: 70px auto;
+  padding: 65px 25px;
+  text-align: center;
+  border: 1px solid #263750;
+  border-radius: 15px;
+  background:
+    radial-gradient(ellipse at top, rgba(8,124,240,.18), transparent 65%),
+    #0d2038;
 }
+
+.cta h2 {
+  color: white;
+  font-size: 32px;
+  margin: 0 0 15px;
+}
+
+.cta p {
+  max-width: 680px;
+  margin: auto;
+  color: #b7c5d6;
+  line-height: 1.8;
+}
+
+.btn {
+  display: inline-block;
+  background: #087cf0;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 25px;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #0065ca;
+}
+
 footer {
-  background:#000;
-  border-top:1px solid rgba(65,71,84,0.2);
-  padding:32px 16px;
-  text-align:center;
-  font-size:12px;
-  color:#c1c6d7;
+  background: #040d19;
+  border-top: 1px solid #263750;
+  padding: 35px 20px;
+  text-align: center;
+  color: #9eafc3;
+  font-size: 13px;
 }
-@media(max-width:768px){
-  nav {display:none;}
-  .menu-btn {display:block;}
-  h1 {font-size:32px;}
-  .grid {grid-template-columns:1fr;}
+
+footer a {
+  color: #b7c5d6;
+  margin: 0 9px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #087cf0;
+}
+
+@media(max-width: 1100px) {
+  nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+@media(max-width: 700px) {
+  .hero {
+    padding: 75px 20px;
+  }
+
+  section {
+    padding: 55px 18px;
+  }
+
+  .grid,
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card img {
+    height: 220px;
+  }
+
+  .cta {
+    margin: 40px 15px;
+    padding: 45px 20px;
+  }
+
+  .cta h2 {
+    font-size: 27px;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="nav-wrap">
-  <div class="logo">⚙️ VETA</div>
-  
-  <nav>
+  <div class="nav-wrap">
+
+    <a href="index.html" class="logo">
+      <span class="logo-icon">M</span>
+      <span>
+        MARWA TECH
+        <small>COMPANY LTD</small>
+      </span>
+    </a>
+
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="products.html">PRODUCTS</a>
+      <a href="gallery.html" class="active">GALLERY</a>
+      <a href="news.html">NEWS</a>
+      <a href="career.html">CAREER</a>
+      <a href="support.html">SUPPORT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">HOME</a>
     <a href="about.html">ABOUT</a>
     <a href="services.html">SERVICES</a>
+    <a href="products.html">PRODUCTS</a>
     <a href="gallery.html" class="active">GALLERY</a>
     <a href="news.html">NEWS</a>
     <a href="career.html">CAREER</a>
     <a href="support.html">SUPPORT</a>
     <a href="contact.html">CONTACT</a>
-  </nav>
-  
-  <button class="menu-btn" id="menuBtn">☰</button>
-</div>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">HOME</a>
-  <a href="about.html">ABOUT</a>
-  <a href="services.html">SERVICES</a>
-  <a href="gallery.html" class="active">GALLERY</a>
-  <a href="news.html">NEWS</a>
-  <a href="career.html">CAREER</a>
-  <a href="support.html">SUPPORT</a>
-  <a href="contact.html">CONTACT</a>
-</div>
+  </div>
 </header>
 
 <main>
-<section class="hero">
-<div class="hero-content">
-<span class="tag">Engineered Excellence</span>
-<h1>Our Portfolio</h1>
-<p>Explore our engineering and technology milestones. We deliver structural integrity and high-performance solutions for the modern digital landscape.</p>
+
+<div class="hero">
+  <div class="hero-content">
+    <span class="tag">What We Do</span>
+    <h1>Our Work & Technology Solutions</h1>
+    <p>
+      From business websites and software systems to office networks
+      and IT support, we help businesses and organisations in Kenya
+      make better use of technology.
+    </p>
+  </div>
 </div>
-</section>
 
 <section>
-<div class="grid">
-<div class="card" style="grid-column:span 8">
-<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzGPNX8hLodb07z5qPOGkvxbUFvqfcpnyR23ngMtLJrJuZEhHpmwLAUhC8mU2yZH4iO8Y-1noUySRqUagBtepG0OjKU_vWEfG6c_rOLFh9BXFnekIJqlT0C-L6EOyDU7xmuPTmkpguvyEEk2PjE9sbCPKR-7lHP-NhVly_8Y2xrCdxWImxwa8C819wNOfHAoTKlmHX-_HJYEddEA-KeXf-OR5Nj0HtTd6S1I7x-Vv_co-2wCcEijHNefFK0nGQT5TKg2yFbKivJFPq" alt="Enterprise Cloud Migration">
-<div class="card-content">
-<div style="margin-bottom:12px">
-<span class="badge">CLOUD INFRASTRUCTURE</span>
-<span style="color:#c1c6d7;font-size:12px">2024</span>
-</div>
-<h3 style="font-size:28px;margin:0 0 16px 0">Enterprise Cloud Migration</h3>
-<p style="margin:0 0 24px 0">A comprehensive transition of legacy systems to a highly scalable, distributed cloud architecture for a global logistics leader. Optimized for 99.99% uptime and zero-latency data processing.</p>
-<a href="#" style="color:#adc7ff;text-decoration:none;font-weight:bold">VIEW CASE STUDY →</a>
-</div>
-</div>
 
-<div class="card" style="grid-column:span 4">
-<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7-wuG1kmVpjBOYIRgryN-ptcq2gqlPouCVS_C1BH7ohYNqvs7PXCTwAQUJmBqX5dTI5Q72oAaVeo_qY1G0ImuC4nu_2nZIVMrsInL8u-wqa863c3Ae11RWb8sAq4cRc_1eSY3cPOH8w_ErZZlH1die6dtkKbXnkJ1fqmynP66XC_SRgQfDHhiiLoxVxOiLt4iAo3yI1CI8O4rcuH2kn8WXumDTMQaUPWSpqjNElltyo8m4rTk3AmZLOGa2Ot22Qlm7X0WcLl2X6wi" alt="Data Center Security">
-<div class="card-content">
-<div style="margin-bottom:12px">
-<span class="badge" style="background:rgba(51,215,254,0.1);color:#33d7fe">CYBERSECURITY</span>
-</div>
-<h3 style="font-size:24px;margin:0 0 12px 0">National Data Center Security</h3>
-<p style="font-size:14px;margin:0 0 24px 0">Implementing multi-layer defensive protocols and biometric authentication systems for sovereign data integrity.</p>
-<a href="#" style="color:#adc7ff;text-decoration:none;font-weight:bold">VIEW DETAILS →</a>
-</div>
-</div>
+  <div class="section-heading">
+    <span class="tag">Project Examples</span>
+    <h2>Technology That Solves Everyday Business Needs</h2>
+    <p>
+      A look at the types of projects and solutions MARWA TECH
+      can help businesses plan, develop and implement.
+    </p>
+  </div>
 
-<div class="card" style="grid-column:span 4">
-<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjAJFg5gRJcbj8zCNgRwi9WoNqOCXmF5RFdIZIFJ8e4dAotLCjKZCkD48A8XS_xU1Dlntgb59W8EXJ0JLMXD93QvwgCsyFBT-kSdN505GK5K4hRCP2YFdLgAEU91iqzrx2PTCbIZzgPmStS9tJ1NmkLRm0X0TOv2yKqVNq2w9XC8vw1BnZviluiIvfLHxl8tInBELBE0WK5qdH_6lMW-KBh0uuK9syD6IolmFGMa0-FcTG19vCUpLZoJV2KOeGpXE4y3bZFRJiMHQb" alt="E-commerce Architecture">
-<div class="card-content">
-<div style="margin-bottom:12px">
-<span class="badge">WEB DEVELOPMENT</span>
-</div>
-<h3 style="font-size:24px;margin:0 0 12px 0">Scalable E-commerce Architecture</h3>
-<p style="font-size:14px;margin:0">A headless commerce solution handling 1M+ monthly sessions with AI-driven personalization engines.</p>
-</div>
-</div>
+  <div class="intro-note">
+    The examples below illustrate our areas of work. They are not
+    presented as completed client projects or customer endorsements.
+  </div>
 
-<div class="card" style="grid-column:span 8">
-<div style="display:flex;flex-wrap:wrap">
-<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4I2t8e3KXxsnWrGxUnI-4toG6GeBLQXgDGHx_vy9UsvUEi6BgzRG87apU_7X6MipHIllw9H9u0plZaWLxWDf7OyOwle2_oQ8DiuNq0ztXwxUse5wwgcoz4yxEihUMEC3o-aFY3H2n-00OuO2dEcdAV5RDtY3AR33ZArLHja69e_KjunAzcpxdB4_Lq82oCNX1UUzRxMgZEGhYtTByvm6sbefAiqdLVab0d_ciRZjNiPhC9oRfJqdbuJbGJ0hlZXPX3mF_PZ7m8o4Q" alt="Fiber-Optic Backbone" style="width:50%;height:250px">
-<div style="width:50%;padding:32px">
-<div style="margin-bottom:12px">
-<span class="badge" style="background:rgba(229,226,225,0.1);color:#e5e2e1">INFRASTRUCTURE</span>
-</div>
-<h3 style="font-size:28px;margin:0 0 16px 0">Fiber-Optic Backbone Deployment</h3>
-<p style="margin:0 0 24px 0">Critical infrastructure project connecting industrial zones with high-speed, redundant fiber-optic rings.</p>
-<a href="#" style="color:#adc7ff;text-decoration:none;font-weight:bold">TECHNICAL SPECS →</a>
-</div>
-</div>
-</div>
-</div>
+  <div class="grid">
+
+    <article class="project-card">
+      <img
+        src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000"
+        alt="Business website and online dashboard displayed on a computer"
+        loading="lazy"
+      >
+      <div class="project-content">
+        <span class="project-category">Web Development</span>
+        <h3>Business Websites</h3>
+        <p>
+          Professional websites for Kenyan businesses that want
+          to introduce their services, share company information
+          and make it easier for customers to get in touch.
+        </p>
+        <span class="project-label">Business Websites</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img
+        src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1000"
+        alt="Online shopping and digital payment experience"
+        loading="lazy"
+      >
+      <div class="project-content">
+        <span class="project-category">Software Development</span>
+        <h3>Online Shops & Business Systems</h3>
+        <p>
+          Online shops, stock management systems and business
+          applications designed to help organisations manage
+          orders, records and everyday operations.
+        </p>
+        <span class="project-label">Business Applications</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img
+        src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000"
+        alt="Computer servers and network infrastructure"
+        loading="lazy"
+      >
+      <div class="project-content">
+        <span class="project-category">Network Infrastructure</span>
+        <h3>Office Network Setup</h3>
+        <p>
+          Network planning and setup for offices and growing
+          organisations, including connectivity, Wi-Fi coverage
+          and reliable access to shared resources.
+        </p>
+        <span class="project-label">Networking Solutions</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img
+        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1000"
+        alt="Cybersecurity and digital security technology"
+        loading="lazy"
+      >
+      <div class="project-content">
+        <span class="project-category">Cybersecurity</span>
+        <h3>Business IT Security</h3>
+        <p>
+          Practical security measures to help businesses protect
+          their computers, accounts, networks and important
+          information from common digital threats.
+        </p>
+        <span class="project-label">Security Solutions</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img
+        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000"
+        alt="Cloud technology and connected digital systems"
+        loading="lazy"
+      >
+      <div class="project-content">
+        <span class="project-category">Cloud Services</span>
+        <h3>Cloud & Data Solutions</h3>
+        <p>
+          Helping organisations make use of cloud-based tools,
+          online storage and collaboration services to access
+          their work and information more conveniently.
+        </p>
+        <span class="project-label">Cloud Services</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img
+        src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=1000"
+        alt="IT technician working with computer equipment"
+        loading="lazy"
+      >
+      <div class="project-content">
+        <span class="project-category">IT Consulting</span>
+        <h3>IT Support & Technical Assistance</h3>
+        <p>
+          Technical assistance for businesses dealing with
+          computer problems, software installation, system
+          maintenance and general IT requirements.
+        </p>
+        <span class="project-label">IT Support</span>
+      </div>
+    </article>
+
+  </div>
 </section>
 
-<section class="cta">
-<h2 style="font-size:40px;margin:0 0 24px 0">Ready to Build Your Next Milestone?</h2>
-<p style="max-width:700px;margin:0 auto 48px auto">Our engineering teams are ready to tackle your most complex technological challenges with precision and integrity.</p>
-<a href="contact.html" style="display:inline-block;background:#adc7ff;color:#000;padding:16px 40px;border-radius:8px;font-weight:bold;text-decoration:none;margin-right:16px">START A PROJECT</a>
-<a href="#" style="display:inline-block;border:1px solid #414754;padding:16px 40px;border-radius:8px;font-weight:bold;text-decoration:none;color:#e5e2e1">DOWNLOAD PORTFOLIO PDF</a>
-</section>
+<div class="services-strip">
+  <div class="services-strip-inner">
+    <div class="section-heading">
+      <span class="tag">Who We Can Work With</span>
+      <h2>Technology for Different Businesses</h2>
+      <p>
+        We understand that different organisations have different
+        needs. The right solution starts with understanding the
+        business and the problem it wants to solve.
+      </p>
+    </div>
+
+    <div class="services-list">
+
+      <div class="service-item">
+        <h3>Small & Medium Businesses</h3>
+        <p>Websites, online presence, business systems and IT support.</p>
+      </div>
+
+      <div class="service-item">
+        <h3>Schools & Training Institutions</h3>
+        <p>Websites, digital records, connectivity and technology support.</p>
+      </div>
+
+      <div class="service-item">
+        <h3>Offices & Organisations</h3>
+        <p>Network setup, cloud services, security and IT consulting.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="cta">
+  <span class="tag">Have a Project in Mind?</span>
+  <h2>Let's Discuss What Your Business Needs</h2>
+  <p>
+    Whether you need a website, a business system, better office
+    connectivity or technical support, get in touch with MARWA TECH
+    and tell us what you are looking to achieve.
+  </p>
+  <a href="contact.html" class="btn">Talk to Our Team →</a>
+</div>
+
 </main>
 
 <footer>
-⚙️ VETA © 2026 VETA COMPANY LTD. All rights reserved.
-<div style="margin-top:12px">
-<a href="privacy.html" style="color:#c1c6d7;margin:0 8px;text-decoration:none">Privacy</a>
-<a href="terms.html" style="color:#c1c6d7;margin:0 8px;text-decoration:none">Terms</a>
-<a href="contact.html" style="color:#c1c6d7;margin:0 8px;text-decoration:none">Contact</a>
-</div>
+  <div>© 2026 MARWA TECH COMPANY LTD. All rights reserved.</div>
+
+  <div style="margin-top:15px">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </footer>
 
 <script>
@@ -313,12 +647,16 @@ const menuBtn = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
 menuBtn.addEventListener('click', () => {
-  mobileMenu.classList.toggle('show');
+  const isOpen = mobileMenu.classList.toggle('show');
+  menuBtn.setAttribute('aria-expanded', isOpen);
+  menuBtn.textContent = isOpen ? '✕' : '☰';
 });
 
 document.querySelectorAll('.mobile-menu a').forEach(link => {
   link.addEventListener('click', () => {
     mobileMenu.classList.remove('show');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.textContent = '☰';
   });
 });
 </script>
